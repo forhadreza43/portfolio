@@ -12,6 +12,8 @@ import coding from "@/assets/coding.json";
 import ResumeDownload from "./ResumeDownload";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
+import hero from "@/assets/hero.png"; 
 
 const Hero = () => {
   const words = ["Quick Learner", "Tech Enthusiast"];
@@ -140,9 +142,16 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Lottie
+            {/* <Lottie
               animationData={coding}
               className="w-[250px] sm:w-[320px] md:w-[420px] lg:w-[500px] h-auto "
+            /> */}
+            <Image
+              src={hero}
+              alt="Coding animation"
+              className="rounded-full w-[450px] h-auto"
+              width={1321}
+              height={1321}
             />
           </motion.div>
         </div>
