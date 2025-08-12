@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       </div>
 
       {/* Right - Content */}
-      <div className="lg:w-1/2 flex flex-col justify-between px-6 py-4 ">
+      <div className="lg:w-1/2 flex flex-col justify-between lg:pl-6 pt-4 lg:pt-0 ">
         <div>
           <h3 className="font-bold text-xl lg:text-2xl mb-2">{title}</h3>
           <p className=" mb-4 text-justify text-sm sm:text-base md:text-md">

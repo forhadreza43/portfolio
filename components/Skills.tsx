@@ -219,8 +219,8 @@ const Skills = () => {
               <TabsTrigger
                 key={category}
                 value={category}
-                className="
-    px-3 py-1.5 rounded-md border-2 border-primary
+                className=" 
+    px-3 py-1.5 rounded-full border-2 border-primary
     dark:text-primary
     data-[state=active]:bg-primary
     data-[state=active]:text-white
