@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 
 const ResumeDownload = () => {
   return (
-    <Button asChild className="rounded-full flex items-center gap-2">
+    <Button asChild className="rounded-full flex items-center gap-2 text-white">
       <a
         href="/resume.pdf" // Place resume.pdf in /public/
         download

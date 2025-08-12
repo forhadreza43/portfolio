@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
 import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
-
+import OutlineButton from "@/components/button/OutlineButton";
+import PrimaryButton from "./button/PrimaryButton";
 interface ProjectProps {
   imageUrl: string | StaticImageData;
   title: string;
@@ -90,19 +90,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
         <div className="flex gap-4">
           {liveLink && (
             <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-primary rounded-full text-sm shadow-md transition">
-                Details
-              </Button>
+              <PrimaryButton>Live Demo</PrimaryButton>
             </Link>
           )}
           {repoLink && (
             <Link href={repoLink} target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="outline"
-                className="hover:bg-primary hover:border-primary rounded-full text-sm shadow-md transition"
-              >
-                Github Repo
-              </Button>
+              <OutlineButton>Github Repo</OutlineButton>
             </Link>
           )}
         </div>

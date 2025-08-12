@@ -127,7 +127,7 @@ const Hero = () => {
               <Link href="#contact">
                 <Button
                   variant="outline"
-                  className="rounded-full hover:bg-primary hover:border-primary"
+                  className="rounded-full hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
                 >
                   Contact me
                 </Button>
