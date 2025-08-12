@@ -42,10 +42,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="mt-12">
+    <section id="contact" className="scroll-mt-30 mt-12 lg:mt-20">
       <SectionHeading>Contact</SectionHeading>
 
-      <div className="grid md:grid-cols-2 gap-10 mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 mx-auto">
         {/* Contact Form */}
         <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20">
           <form onSubmit={sendEmail} className="space-y-4">

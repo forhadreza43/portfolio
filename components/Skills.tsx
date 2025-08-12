@@ -207,7 +207,7 @@ const skillsData = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="scroll-mt-30 mt-12">
+    <section id="skills" className="scroll-mt-30 mt-12 lg:mt-20">
       <div className="mx-auto">
         {/* Heading */}
         <SectionHeading>Skills</SectionHeading>

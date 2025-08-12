@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="mx-auto mt-12">
+    <section id="about" className="scroll-mt-30 mx-auto mt-12 lg:mt-20">
       <SectionHeading>About me</SectionHeading>
 
       <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20">

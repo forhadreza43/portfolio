@@ -37,6 +37,7 @@ export const FloatingNav = ({
     damping: 30,
     restDelta: 0.001,
   });
+  
   // Smooth scroll handler
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
@@ -136,7 +137,7 @@ export const FloatingNav = ({
                             ? "text-primary underline decoration-2 underline-offset-5 font-semibold"
                             : ""
                         )}
-                        onClick={() => setActiveSection(navItem.href)}
+                        onClick={(event) => {setActiveSection(navItem.href);handleNavClick(event, navItem.href)}}
                       >
                         {navItem.name}
                       </Link>
