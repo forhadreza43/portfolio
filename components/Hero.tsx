@@ -66,7 +66,7 @@ const Hero = () => {
             >
               MERN Stack Developer
             </motion.h2>
-            <h2 className="text-base sm:text-lg md:text-xl font-medium text-base-content/80">
+            <h2 className="text-base sm:text-lg md:text-xl text-primary font-medium text-base-content/80">
               <Typewriter
                 words={words}
                 loop={100}
