@@ -75,7 +75,7 @@ const Hero = () => {
               />
             </h2>
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-base-content/70 max-w-xl"
+              className="text-sm sm:text-base md:text-md text-base-content/70 max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -91,7 +91,7 @@ const Hero = () => {
               className="flex gap-3 mt-4"
             >
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/rezaforhad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#0A66C2] hover:scale-110 transition-transform"
@@ -101,7 +101,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/forhadreza43"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" hover:scale-110 transition-transform"
@@ -111,7 +111,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://twitter.com/yourusername"
+                href="https://twitter.com/forhadreza111"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#1DA1F2] hover:scale-110 transition-transform"

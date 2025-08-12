@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 // import Hero from "@/components/Hero";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "@/components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
           <main className="relative w-full overflow-hidden">
             {/* <Hero /> */}
             {children}
+            <Footer />
           </main>
         </ThemeProvider>
       </body>

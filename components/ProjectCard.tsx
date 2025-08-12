@@ -1,7 +1,10 @@
+import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectProps {
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   title: string;
   description: string;
   features: string[];
@@ -21,24 +24,30 @@ const ProjectCard: React.FC<ProjectProps> = ({
   repoLink,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-white border rounded-lg shadow-md p-6 max-w-4xl">
+    <div className="flex p-6 flex-col lg:flex-row rounded-lg shadow-md bg-primary/5 border border-primary/20">
       {/* Left - Image Container */}
-      <div className="md:w-1/2 rounded-md border border-gray-300 bg-green-100 flex items-center justify-center">
-        <img
+      <div className="lg:w-1/2 rounded-md border border-gray-300 bg-green-100 flex items-center justify-center">
+        
+        
+        <Image
           src={imageUrl}
           alt={`${title} screenshot`}
           className="w-full h-auto rounded-md object-cover"
+          style={{ objectFit: "cover" }}
         />
       </div>
 
       {/* Right - Content */}
-      <div className="md:w-1/2 flex flex-col justify-between px-6 py-4">
+      <div className="lg:w-1/2 flex flex-col justify-between px-6 py-4 ">
         <div>
-          <h3 className="font-bold text-xl mb-2">{title}</h3>
-          <p className="text-gray-700 mb-4">{description}</p>
-          <ul className="list-decimal list-inside mb-4 space-y-1">
+          <h3 className="font-bold text-xl lg:text-2xl mb-2">{title}</h3>
+          <p className=" mb-4 text-justify text-sm sm:text-base md:text-md">
+            {description}
+          </p>
+          <h3 className="font-semibold lg:text-lg mb-1 mb-3">Key Features</h3>
+          <ul className="list-decimal list-inside mb-4 space-y-1 text-sm sm:text-base md:text-md">
             {features.map((feature, idx) => (
-              <li key={idx} className="text-gray-600">
+              <li key={idx} className="">
                 {feature}
               </li>
             ))}
@@ -50,7 +59,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           {techStack.map((tech, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 bg-green-100 border border-green-400 rounded text-green-700 text-sm font-semibold cursor-default"
+              className="px-3 py-1 cursor-default bg-primary/20 border border-primary/40 rounded-full text-xs font-semibold"
             >
               {tech}
             </span>
@@ -60,24 +69,21 @@ const ProjectCard: React.FC<ProjectProps> = ({
         {/* Action Buttons */}
         <div className="flex gap-4">
           {liveLink && (
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded shadow-md transition"
-            >
-              Live Link
-            </a>
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-primary rounded-full text-sm shadow-md transition">
+                Details
+              </Button>
+            </Link>
           )}
           {repoLink && (
-            <a
-              href={repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded shadow-md transition"
-            >
-              Repo Link
-            </a>
+            <Link href={repoLink} target="_blank" rel="noopener noreferrer">
+              <Button
+                variant={"outline"}
+                className="hover:bg-primary hover:border-primary rounded-full text-sm shadow-md transition"
+              >
+                Github Repo
+              </Button>
+            </Link>
           )}
         </div>
       </div>

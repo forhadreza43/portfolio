@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import { ThreeDCard } from "./3d-card";
 import { SheetTrigger, Sheet, SheetContent, SheetTitle } from "./ui/sheet";
 import { Button } from "./ui/button";
-import { Menu, Download } from "lucide-react"; // Added Download icon
+import { Menu } from "lucide-react"; 
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import ResumeDownload from "./ResumeDownload";
 type NavItem = {
@@ -78,45 +78,7 @@ export const FloatingNav = ({
     return () => observer.disconnect();
   }, [navItems]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-  //     setIsVisible(!(currentScrollY > lastScrollY && currentScrollY > 100));
-  //     setIsScrolled(currentScrollY > 20);
-  //     setLastScrollY(currentScrollY);
-  //   };
-  //   handleScroll();
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [lastScrollY]);
-
-  // useEffect(() => {
-  //   setActiveSection(window.location.pathname);
-  // }, []);
-
-  // const navbarVariants = {
-  //   hidden: { y: -100, opacity: 0 },
-  //   visible: {
-  //     y: 0,
-  //     opacity: 1,
-  //     transition: { type: "spring", stiffness: 300, damping: 20, mass: 0.5 },
-  //   },
-  //   exit: {
-  //     y: -100,
-  //     opacity: 0,
-  //     transition: { duration: 0.1, ease: "easeInOut" },
-  //   },
-  // };
-
-  // const itemVariants = {
-  //   hidden: { opacity: 0, y: -10 },
-  //   visible: (i: number) => ({
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: { delay: 0.05 * i, duration: 0.5, ease: "easeOut" },
-  //   }),
-  // };
-
+  
   const isScrolledBgClass =
     theme === "dark"
       ? "bg-background/30 backdrop-blur-md border border-primary/20 shadow-[0_8px_32px_rgba(255,255,255,0.03)]"

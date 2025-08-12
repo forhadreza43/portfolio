@@ -7,7 +7,7 @@ const AboutMe = () => {
       <SectionHeading>About me</SectionHeading>
 
       <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20">
-        <p className="text-justify text-sm sm:text-base md:text-lg text-base-content/70">
+        <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70">
           I&apos;m a passionate MERN Stack developer with a strong foundation in
           building dynamic, scalable, and user-focused web applications.
           Proficient in MongoDB, Express.js, React, and Node.js, I thrive on
