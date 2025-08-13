@@ -7,8 +7,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
-import Lottie from "lottie-react";
-import coding from "@/assets/coding.json";
+// import Lottie from "lottie-react";
 import ResumeDownload from "./ResumeDownload";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -137,7 +136,7 @@ const Hero = () => {
 
           {/* right side */}
           <motion.div
-            className="flex justify-center lg:justify-end w-full lg:w-1/2"
+            className="flex z-1 justify-center lg:justify-end w-full lg:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -152,6 +151,7 @@ const Hero = () => {
               className="rounded-full w-[450px] h-auto"
               width={1321}
               height={1321}
+              priority
             />
           </motion.div>
         </div>

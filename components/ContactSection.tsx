@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "./SectionHeading";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
+import { motion } from "motion/react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", message: "" });
@@ -47,7 +48,13 @@ export default function ContactSection() {
 
       <div className="grid md:grid-cols-2 gap-6 mx-auto">
         {/* Contact Form */}
-        <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20">
+        <motion.div
+          className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <form onSubmit={sendEmail} className="space-y-4">
             <Input
               placeholder="Your Name"
@@ -73,10 +80,16 @@ export default function ContactSection() {
               {loading ? "Sending..." : "Send Message"}
             </Button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Information */}
-        <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20 flex flex-col justify-center gap-6">
+        <motion.div
+          className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20 flex flex-col justify-center gap-6"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="flex items-center gap-3">
             <Mail className="text-primary" />
             <span className="md:text-lg">forhad.bimt@gmail.com</span>
@@ -89,7 +102,7 @@ export default function ContactSection() {
             <MapPin className="text-primary" />
             <span className="md:text-lg">Dhaka, Bangladesh</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

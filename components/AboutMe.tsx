@@ -1,12 +1,20 @@
+"use client"
 import React from "react";
 import SectionHeading from "./SectionHeading";
+import { motion } from "motion/react";
 
 const AboutMe = () => {
   return (
     <section id="about" className="scroll-mt-30 mx-auto mt-12 lg:mt-20">
       <SectionHeading>About me</SectionHeading>
 
-      <div className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20">
+      <motion.div
+        className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70">
           I&apos;m a passionate MERN Stack developer with a strong foundation in
           building dynamic, scalable, and user-focused web applications.
@@ -20,7 +28,7 @@ const AboutMe = () => {
           technologies, contributing to open-source projects, or sharing
           knowledge with the developer community.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

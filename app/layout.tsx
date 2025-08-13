@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 // import Hero from "@/components/Hero";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/animation/BackToTop";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <BackToTop />
           <Toaster position="top-right" expand={false} richColors closeButton />
           <main className="relative w-full overflow-hidden">
             {/* <Hero /> */}

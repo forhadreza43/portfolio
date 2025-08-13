@@ -1,19 +1,21 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import OutlineButton from "@/components/button/OutlineButton";
 import PrimaryButton from "./button/PrimaryButton";
+import { motion } from "motion/react";
 interface ProjectProps {
   imageUrl: string | StaticImageData;
   title: string;
   description: string;
   features: string[];
-  techStack: string[]; // e.g., ["Node", "Express", "Next.js", "React", "React-Router", "Firebase"]
+  techStack: string[];
   liveLink?: string;
   repoLink?: string;
   imageBg?: string;
-  order?: 0 | 1; // New prop for layout swap
+  order?: 0 | 1;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -25,21 +27,29 @@ const ProjectCard: React.FC<ProjectProps> = ({
   liveLink,
   repoLink,
   imageBg = "bg-green-100",
-  order = 0, // default value
+  order = 0,
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
         "flex p-6 flex-col lg:flex-row rounded-lg shadow-md bg-primary/5 border border-primary/20",
         order === 1 && "lg:flex-row-reverse"
       )}
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       {/* Left - Image Container */}
-      <div
+      <motion.div
         className={cn(
           "lg:w-1/2 rounded-md border border-gray-300 flex items-center justify-center",
           imageBg
         )}
+        initial={{ opacity: 0, x: order === 0 ? -50 : 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
       >
         <Image
           src={imageUrl}
@@ -47,15 +57,19 @@ const ProjectCard: React.FC<ProjectProps> = ({
           className="w-full h-auto rounded-md object-cover"
           style={{ objectFit: "cover" }}
         />
-      </div>
+      </motion.div>
 
       {/* Right - Content */}
-      <div
+      <motion.div
         className={cn(
           `lg:w-1/2 flex flex-col justify-between ${
             order === 1 ? "lg:pr-6" : "lg:pl-6"
           } pt-4 lg:pt-0`
         )}
+        initial={{ opacity: 0, x: order === 0 ? 50 : -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
       >
         <div>
           <h3 className="font-bold text-lg sm:text-xl lg:text-2xl mb-2">
@@ -99,8 +113,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
             </Link>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

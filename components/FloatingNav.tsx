@@ -3,7 +3,7 @@
 import React, { JSX, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
+import { AnimatePresence, motion} from "motion/react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useTheme } from "next-themes";
 import { ThreeDCard } from "./3d-card";
@@ -27,17 +27,8 @@ export const FloatingNav = ({
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("/");
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const { theme } = useTheme();
 
-  // Scroll progress tracking
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-  
   // Smooth scroll handler
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
@@ -57,6 +48,8 @@ export const FloatingNav = ({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
   // Active section tracking with IntersectionObserver
   useEffect(() => {
     const sections = navItems
@@ -99,7 +92,7 @@ export const FloatingNav = ({
           animate="visible"
           exit="exit"
           className={cn(
-            "fixed top-4 left-1/2 -translate-x-1/2 w-11/12 max-w-7xl z-50 transition-all duration-300 rounded-full py-3 pl-6 pr-4",
+            "fixed top-4 z-999 left-1/2 -translate-x-1/2 w-11/12 max-w-7xl z-50 transition-all duration-300 rounded-full py-3 pl-6 pr-4",
             isScrolled ? isScrolledBgClass : notScrolledBgClass
           )}
         >
