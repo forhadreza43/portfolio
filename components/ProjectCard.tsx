@@ -56,6 +56,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           alt={`${title} screenshot`}
           className="w-full h-auto rounded-md object-cover"
           style={{ objectFit: "cover" }}
+          priority
         />
       </motion.div>
 

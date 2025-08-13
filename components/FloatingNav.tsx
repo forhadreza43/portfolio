@@ -12,6 +12,7 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react"; 
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import ResumeDownload from "./ResumeDownload";
+import Logo from "./Logo";
 type NavItem = {
   name: string;
   href: string;
@@ -105,11 +106,12 @@ export const FloatingNav = ({
                   className="font-display text-xl font-bold transition-colors hover:text-primary"
                 >
                   <motion.span
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    Forhad Reza
+                    {/* Forhad Reza */}
+                    <Logo />
                   </motion.span>
                 </Link>
               </div>

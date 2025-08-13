@@ -90,18 +90,36 @@ export default function ContactSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-3">
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <Mail className="text-primary" />
             <span className="md:text-lg">forhad.bimt@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-3">
+          </motion.div>
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <FaWhatsapp size={22} className="text-primary" />
             <span className="md:text-lg">+88 01798 182763</span>
-          </div>
-          <div className="flex items-center gap-3">
+          </motion.div>
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <MapPin className="text-primary" />
             <span className="md:text-lg">Dhaka, Bangladesh</span>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
