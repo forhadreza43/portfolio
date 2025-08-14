@@ -145,6 +145,7 @@ const Hero = () => {
               animationData={coding}
               className="w-[250px] sm:w-[320px] md:w-[420px] lg:w-[500px] h-auto "
             /> */}
+
             <Image
               src={hero}
               alt="Coding animation"
