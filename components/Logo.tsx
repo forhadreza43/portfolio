@@ -4,7 +4,7 @@ import React from "react";
 const Logo = () => {
   return (
     <Image
-      className="w-15 sm:w-17 lg:w-20 h-auto"
+      className="w-14 sm:w-16 lg:w-20 h-auto"
       src="/Logo.png"
       alt="Logo"
       width={232}
