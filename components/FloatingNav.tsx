@@ -3,13 +3,13 @@
 import React, { JSX, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { AnimatePresence, motion} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useTheme } from "next-themes";
 import { ThreeDCard } from "./3d-card";
 import { SheetTrigger, Sheet, SheetContent, SheetTitle } from "./ui/sheet";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react"; 
+import { Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import ResumeDownload from "./ResumeDownload";
 import Logo from "./Logo";
@@ -50,7 +50,6 @@ export const FloatingNav = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   // Active section tracking with IntersectionObserver
   useEffect(() => {
     const sections = navItems
@@ -73,7 +72,6 @@ export const FloatingNav = ({
     return () => observer.disconnect();
   }, [navItems]);
 
-  
   const isScrolledBgClass =
     theme === "dark"
       ? "bg-background/30 backdrop-blur-md border border-primary/20 shadow-[0_8px_32px_rgba(255,255,255,0.03)]"
@@ -132,7 +130,10 @@ export const FloatingNav = ({
                             ? "text-primary underline decoration-2 underline-offset-5 font-semibold"
                             : ""
                         )}
-                        onClick={(event) => {setActiveSection(navItem.href);handleNavClick(event, navItem.href)}}
+                        onClick={(event) => {
+                          setActiveSection(navItem.href);
+                          handleNavClick(event, navItem.href);
+                        }}
                       >
                         {navItem.name}
                       </Link>
@@ -142,9 +143,9 @@ export const FloatingNav = ({
               </div>
 
               {/* Theme + Resume (desktop only) */}
-              <div className="hidden lg:flex items-center justify-end gap-3 w-[200px]">
+              <div className="flex items-center justify-end gap-3 w-[200px]">
                 <ThemeToggle />
-                <ResumeDownload />
+                <ResumeDownload className="hidden lg:flex" />
               </div>
 
               {/* Mobile Menu */}
@@ -177,13 +178,12 @@ export const FloatingNav = ({
                   </VisuallyHidden>
                   <div className="flex flex-col h-full">
                     <div className="p-6 flex justify-between items-center">
-                      <Link
-                        href="/"
-                        className="font-display text-2xl font-bold transition-colors hover:text-primary"
-                      >
-                        Forhad Reza
+                      <Link href="/">
+                        <Logo />
                       </Link>
-                      <ThemeToggle />
+                      <div className="mr-10">
+                        <ThemeToggle />
+                      </div>
                     </div>
                     <div className="flex-1 px-6 py-8 space-y-4">
                       {navItems.map((navItem, idx) => (
