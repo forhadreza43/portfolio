@@ -68,7 +68,7 @@ export default function ContactSection() {
                 className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
               />
               <Input
-                placeholder="Email"
+                placeholder="Your Email"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
