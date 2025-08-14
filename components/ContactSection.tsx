@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin } from "lucide-react";
+import { Loader2Icon, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "./SectionHeading";
 import emailjs from "emailjs-com";
@@ -11,7 +11,7 @@ import { toast } from "sonner";
 import { motion } from "motion/react";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ name: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const sendEmail = (e: React.FormEvent) => {
@@ -23,7 +23,9 @@ export default function ContactSection() {
         "service_ue70kok",
         "template_op8mbcw",
         {
+          title: formData.name,
           name: formData.name,
+          email: formData.email,
           message: formData.message,
         },
         "He1SiHj-QvDwpJA6V"
@@ -31,7 +33,7 @@ export default function ContactSection() {
       .then(
         () => {
           toast.success("Message sent successfully!");
-          setFormData({ name: "", message: "" });
+          setFormData({ name: "", email: "", message: "" });
           setLoading(false);
         },
         (error) => {
@@ -56,14 +58,24 @@ export default function ContactSection() {
           viewport={{ once: true }}
         >
           <form onSubmit={sendEmail} className="space-y-4">
-            <Input
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
-            />
+            <div className="space-y-4 lg:space-y-0 lg:flex gap-4">
+              <Input
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
+              />
+              <Input
+                placeholder="Email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
+              />
+            </div>
             <Textarea
               placeholder="Write Your Message"
               value={formData.message}
@@ -77,7 +89,14 @@ export default function ContactSection() {
               className="w-full bg-primary hover:bg-primary/90 text-white"
               disabled={loading}
             >
-              {loading ? "Sending..." : "Send Message"}
+              {loading ? (
+                <>
+                  <Loader2Icon className="animate-spin" />{" "}
+                  <span>Sending...</span>
+                </>
+              ) : (
+                "Send Message"
+              )}
             </Button>
           </form>
         </motion.div>
