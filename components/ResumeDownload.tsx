@@ -2,12 +2,13 @@ import React from "react";
 import { Button } from "./ui/button";
 import { Download } from "lucide-react";
 
-const ResumeDownload = ({className=""}) => {
+const ResumeDownload = () => {
   return (
-    <Button disabled asChild className={`rounded-full flex items-center gap-2 text-white ${className}`}>
+    <Button asChild className="rounded-full flex items-center gap-2">
       <a
-        href="/resume.pdf" // Place resume.pdf in /public/
-        download
+        href="https://docs.google.com/document/d/1taQJ8fEOFbiTQiMj4WPPKQiOyFFqglEAh_7CPSOAjm0/export?format=pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Download Resume"
       >
         <Download className="w-4 h-4" />
