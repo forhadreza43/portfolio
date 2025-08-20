@@ -145,7 +145,7 @@ export const FloatingNav = ({
               {/* Theme + Resume (desktop only) */}
               <div className="flex items-center justify-end gap-3 w-[200px]">
                 <ThemeToggle />
-                <ResumeDownload className="hidden lg:flex" />
+                <ResumeDownload />
               </div>
 
               {/* Mobile Menu */}
