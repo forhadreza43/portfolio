@@ -57,6 +57,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           className="w-full h-auto rounded-md object-cover"
           style={{ objectFit: "cover" }}
           priority
+          placeholder="blur"
         />
       </motion.div>
 

@@ -12,7 +12,7 @@ import ResumeDownload from "./ResumeDownload";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import hero from "@/assets/hero.png"; 
+import hero from "@/assets/hero.png";
 
 const Hero = () => {
   const words = ["Quick Learner", "Tech Enthusiast"];
@@ -153,6 +153,7 @@ const Hero = () => {
               width={1321}
               height={1321}
               priority
+              placeholder="blur"
             />
           </motion.div>
         </div>
