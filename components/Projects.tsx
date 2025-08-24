@@ -29,9 +29,10 @@ const Projects = () => {
             "react-router",
             "Tailwind CSS",
             "Tanstack Query",
-            "EXpress",
+            "Express",
             "MongoDB",
             "Firebase",
+            "Stripe",
           ]}
           liveLink="https://godesh-1ab55.web.app"
           repoLink="https://github.com/forhadreza43/godesh-client"
@@ -50,12 +51,12 @@ const Projects = () => {
             "Delete recipes",
           ]}
           techStack={[
-            "React.js",
-            "EXpress",
+            "Next.js",
+            "Auth.js",
+            "Express.js",
             "MongoDB",
-            "react-router",
             "Tailwind CSS",
-            "Firebase",
+            "JWT",
           ]}
           liveLink="https://recipe-book-next-mu.vercel.app/"
           repoLink="https://github.com/forhadreza43/recipe-book-next"
@@ -77,7 +78,7 @@ A collaborative platform enabling students and evaluators to manage assignments 
           ]}
           techStack={[
             "React.js",
-            "EXpress",
+            "Express.js",
             "JWT",
             "MongoDB",
             "react-router",
