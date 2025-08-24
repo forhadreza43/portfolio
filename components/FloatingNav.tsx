@@ -91,7 +91,7 @@ export const FloatingNav = ({
           animate="visible"
           exit="exit"
           className={cn(
-            "fixed top-4 z-999 left-1/2 -translate-x-1/2 w-11/12 max-w-7xl z-50 transition-all duration-300 rounded-full py-3 pl-6 pr-4",
+            "fixed top-4 z-999 left-1/2 -translate-x-1/2 w-11/12 max-w-7xl transition-all duration-300 rounded-full py-3 pl-6 pr-4",
             isScrolled ? isScrolledBgClass : notScrolledBgClass
           )}
         >

@@ -57,8 +57,8 @@ const Projects = () => {
             "Tailwind CSS",
             "Firebase",
           ]}
-          liveLink="https://recipe-book-client-five.vercel.app/"
-          repoLink="https://github.com/forhadreza43/recipe-book-client"
+          liveLink="https://recipe-book-next-mu.vercel.app/"
+          repoLink="https://github.com/forhadreza43/recipe-book-next"
         />
 
         <ProjectCard

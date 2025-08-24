@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 
 const ResumeDownload = () => {
   return (
-    <Button asChild className="rounded-full flex items-center gap-2">
+    <Button asChild className="hidden rounded-full lg:flex items-center gap-2">
       <a
         href="https://docs.google.com/document/d/1taQJ8fEOFbiTQiMj4WPPKQiOyFFqglEAh_7CPSOAjm0/export?format=pdf"
         target="_blank"
