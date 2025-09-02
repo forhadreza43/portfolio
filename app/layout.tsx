@@ -35,20 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme') || 'dark';
-                  document.documentElement.classList.add(theme);
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head></head>
       <body
         className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
