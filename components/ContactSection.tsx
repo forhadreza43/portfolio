@@ -13,7 +13,7 @@ import { motion } from "motion/react";
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-
+  const isActive = formData?.name && formData?.email && formData?.message;
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -65,7 +65,8 @@ export default function ContactSection() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
+                className="placeholder:text-primary/70 text-sm md:text-base border border-primary/40"
+                required
               />
               <Input
                 placeholder="Your Email"
@@ -73,7 +74,8 @@ export default function ContactSection() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="placeholder:text-primary/70 text-sm md:text-base border border-2 border-primary/40"
+                className="placeholder:text-primary/70 text-sm md:text-base border border-primary/40"
+                required
               />
             </div>
             <Textarea
@@ -82,12 +84,13 @@ export default function ContactSection() {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="placeholder:text-primary/70 text-sm md:text-base border-2 border-primary/40 h-40"
+              className="placeholder:text-primary/70 text-sm md:text-base border border-primary/40 h-40"
+              required
             />
             <Button
               type="submit"
               className="w-full bg-primary hover:bg-primary/90 text-white"
-              disabled={loading}
+              disabled={loading || !isActive}
             >
               {loading ? (
                 <>
