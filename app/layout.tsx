@@ -41,7 +41,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <BackToTop />
-          <Toaster position="top-right" expand={false} richColors closeButton />
+          <Toaster position="top-center" expand={false} richColors closeButton />
           <main className="relative w-full overflow-hidden">
             {/* <Hero /> */}
             {children}
