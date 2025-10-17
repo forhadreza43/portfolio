@@ -30,9 +30,9 @@ import {
   SiJsonwebtokens,
   SiNextdotjs,
 } from "react-icons/si";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SectionHeading from "./SectionHeading";
 import { motion } from "motion/react";
+import PillTabs, { TabItemType } from "./shsfui/switch/pill-tabs";
 
 type SkillData = {
   name: string;
@@ -207,63 +207,61 @@ const skillsData = {
 };
 
 const Skills = () => {
+  const [activeTab, setActiveTab] = React.useState("Web");
+
+  const tabs: TabItemType[] = Object.keys(skillsData).map((category) => ({
+    id: category,
+    label: category,
+  }));
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
+  };
+
   return (
     <section id="skills" className="scroll-mt-30 mt-12 lg:mt-20">
       <div className="mx-auto">
         {/* Heading */}
         <SectionHeading>Skills</SectionHeading>
 
-        {/* Shadcn Tabs */}
-        <motion.div initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}>
-          <Tabs defaultValue="Web" className="w-full">
-            <TabsList className="flex bg-white/20 backdrop-blur-md flex-wrap justify-center  gap-2 md:gap-4 mb-8 mx-auto">
-              {Object.keys(skillsData).map((category) => (
-                <TabsTrigger
-                  key={category}
-                  value={category}
-                  className=" 
-              px-3 py-1.5 rounded-full border-2 border-primary
-              dark:text-primary
-              data-[state=active]:bg-primary
-              data-[state=active]:text-white
-              hover:scale-105 transition-transform min-w-[100px]
-              text-sm 
-              dark:data-[state=active]:bg-primary
-              dark:data-[state=active]:text-white
-            "
-                >
-                  {category}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            {Object.entries(skillsData).map(([category, skills]) => (
-              <TabsContent key={category} value={category}>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5 justify-items-center">
-                  {skills.map((skill: SkillData, index: number) => (
-                    <div
-                      key={index}
-                      className={cn(
-                        `w-full max-w-[11rem] bg-primary/5 rounded-md p-4 md:p-5 flex flex-col items-center justify-center text-center border border-primary/20 shadow-md transition-all ease-in-out duration-500 backdrop-blur-3xl hover:scale-105`
-                      )}
-                    >
-                      {/* p-6 rounded-xl shadow-lg bg-primary/5 border border-primary/20 */}
-                      <div className="text-4xl md:text-5xl mt-2">
-                        {skill.icon}
-                      </div>
-                      <p className="mt-4 font-semibold md:text-lg">
-                        {skill.name}
-                      </p>
+        {/* Pill Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <div className="w-full">
+            <div className="flex justify-center mb-8">
+              <PillTabs
+                tabs={tabs}
+                defaultActiveId="Web"
+                onTabChange={handleTabChange}
+                className="backdrop-blur-md border-1 border-primary/20"
+              />
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5 justify-items-center">
+              {skillsData[activeTab as keyof typeof skillsData]?.map(
+                (skill: SkillData, index: number) => (
+                  <div
+                    key={index}
+                    className={cn(
+                      `w-full max-w-[11rem] bg-primary/5 rounded-md p-4 md:p-5 flex flex-col items-center justify-center text-center border border-primary/20 shadow-md transition-all ease-in-out duration-500 backdrop-blur-3xl hover:scale-105`
+                    )}
+                  >
+                    <div className="text-4xl md:text-5xl mt-2">
+                      {skill.icon}
                     </div>
-                  ))}
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
-      </motion.div>
-        </div>
+                    <p className="mt-4 font-semibold md:text-lg">
+                      {skill.name}
+                    </p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };

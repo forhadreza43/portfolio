@@ -40,9 +40,9 @@ export default function RootLayout({
         className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
         <ThemeProvider>
+          <main className="relative w-full overflow-hidden">
           <BackToTop />
           <Toaster position="top-center" expand={false} richColors closeButton />
-          <main className="relative w-full overflow-hidden">
             {/* <Hero /> */}
             {children}
             <Footer />
