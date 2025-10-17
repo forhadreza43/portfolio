@@ -13,6 +13,7 @@ import { Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import ResumeDownload from "./ResumeDownload";
 import Logo from "./Logo";
+import Profile from "./Profile";
 type NavItem = {
   name: string;
   href: string;
@@ -98,7 +99,7 @@ export const FloatingNav = ({
           <ThreeDCard className="w-full">
             <div className="flex items-center justify-between gap-4">
               {/* Logo */}
-              <div className="w-[160px] flex-shrink-0">
+              <div className="w-[160px] flex-shrink-0 transform -translate-x-2">
                 <Link
                   href="/"
                   className="font-display text-xl font-bold transition-colors hover:text-primary"
@@ -109,7 +110,8 @@ export const FloatingNav = ({
                     transition={{ duration: 0.5 }}
                   >
                     {/* Forhad Reza */}
-                    <Logo />
+                    {/* <Logo /> */}
+                    <Profile name="Forhad Reza" />
                   </motion.span>
                 </Link>
               </div>
@@ -162,7 +164,7 @@ export const FloatingNav = ({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="rounded-full bg-muted/50"
+                      className="rounded-full bg-muted/50 w-8 h-8"
                     >
                       <Menu className="h-6 w-6" />
                       <span className="sr-only">Toggle menu</span>
@@ -181,7 +183,8 @@ export const FloatingNav = ({
                   <div className="flex flex-col h-full">
                     <div className="p-6 flex justify-between items-center">
                       <Link href="/">
-                        <Logo />
+                        {/* <Logo /> */}
+                        <Profile name="" />
                       </Link>
                       <div className="mr-10">
                         <ThemeToggle />

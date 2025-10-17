@@ -29,7 +29,12 @@ import {
   SiFirebase,
   SiJsonwebtokens,
   SiNextdotjs,
+  SiMysql,
+  SiPostgresql,
+  SiAdobeillustrator,
 } from "react-icons/si";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
+import { RiJavascriptFill } from "react-icons/ri";
 import SectionHeading from "./SectionHeading";
 import { motion } from "motion/react";
 import PillTabs, { TabItemType } from "./shsfui/switch/pill-tabs";
@@ -44,28 +49,10 @@ type SkillData = {
 const skillsData = {
   Web: [
     {
-      name: "HTML5",
-      icon: <SiHtml5 className="text-orange-500" />,
-      borderColor: "border-orange-500",
-      shadowColor: "hover:shadow-orange-500/40",
-    },
-    {
-      name: "CSS3",
-      icon: <SiCss3 className="text-blue-400" />,
-      borderColor: "border-blue-400",
-      shadowColor: "hover:shadow-blue-400/40",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss className="text-cyan-300" />,
-      borderColor: "border-cyan-300",
-      shadowColor: "hover:shadow-cyan-300/40",
-    },
-    {
-      name: "JavaScript",
-      icon: <SiJavascript className="text-yellow-400" />,
-      borderColor: "border-yellow-400",
-      shadowColor: "hover:shadow-yellow-400/40",
+      name: "Next.js",
+      icon: <SiNextdotjs className="text-base-content" />,
+      borderColor: "border-base-content",
+      shadowColor: "hover:shadow-base-content/40",
     },
     {
       name: "React",
@@ -74,10 +61,16 @@ const skillsData = {
       shadowColor: "hover:shadow-cyan-400/40",
     },
     {
-      name: "Next.js",
-      icon: <SiNextdotjs className="text-base-content" />,
-      borderColor: "border-base-content",
-      shadowColor: "hover:shadow-base-content/40",
+      name: "TypeScript",
+      icon: <BiLogoTypescript className="text-blue-400" />,
+      borderColor: "border-blue-400",
+      shadowColor: "hover:shadow-blue-400/40",
+    },
+    {
+      name: "JavaScript",
+      icon: <RiJavascriptFill className="text-yellow-400" />,
+      borderColor: "border-yellow-400",
+      shadowColor: "hover:shadow-yellow-400/40",
     },
     {
       name: "Node.js",
@@ -91,11 +84,30 @@ const skillsData = {
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-base-content/30",
     },
+
     {
       name: "MongoDB",
       icon: <SiMongodb className="text-primary" />,
       borderColor: "border-primary",
       shadowColor: "hover:shadow-primary/40",
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql className="text-blue-400" />,
+      borderColor: "border-blue-400",
+      shadowColor: "hover:shadow-blue-400/40",
+    },
+    {
+      name: "PostgreSQL",
+      icon: <BiLogoPostgresql className="text-blue-400" />,
+      borderColor: "border-blue-400",
+      shadowColor: "hover:shadow-blue-400/40",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-cyan-300" />,
+      borderColor: "border-cyan-300",
+      shadowColor: "hover:shadow-cyan-300/40",
     },
     {
       name: "Firebase",
@@ -142,12 +154,6 @@ const skillsData = {
       shadowColor: "hover:shadow-base-content/30",
     },
     {
-      name: "AOS",
-      icon: <FaRegImage className="text-pink-400" />,
-      borderColor: "border-pink-400",
-      shadowColor: "hover:shadow-pink-400/40",
-    },
-    {
       name: "TanStack Query",
       icon: <SiReactquery className="text-red-500" />,
       borderColor: "border-red-500",
@@ -174,12 +180,6 @@ const skillsData = {
       shadowColor: "hover:shadow-blue-400/40",
     },
     {
-      name: "Adobe XD",
-      icon: <SiAdobexd className="text-pink-400" />,
-      borderColor: "border-pink-400",
-      shadowColor: "hover:shadow-pink-400/40",
-    },
-    {
       name: "Pixo",
       icon: <FaRegImage className="text-green-400" />,
       borderColor: "border-green-400",
@@ -192,22 +192,29 @@ const skillsData = {
       shadowColor: "hover:shadow-blue-300/40",
     },
     {
+      name: "Illustrator",
+      icon: <SiAdobeillustrator className="text-orange-600" />,
+      borderColor: "border-red-500",
+      shadowColor: "hover:shadow-red-500/40",
+    },
+    {
       name: "Notion",
       icon: <SiNotion />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-black/30 dark:hover:shadow-base-content/30",
-    },
-    {
-      name: "Trello",
-      icon: <SiTrello className="text-blue-500" />,
-      borderColor: "border-blue-500",
-      shadowColor: "hover:shadow-blue-500/40",
     },
   ],
 };
 
 const Skills = () => {
   const [activeTab, setActiveTab] = React.useState("Web");
+
+  // Safelist fill-* classes so Tailwind includes them when built from dynamic values
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const TAILWIND_SAFELIST =
+    "fill-orange-500 fill-blue-400 fill-cyan-300 fill-yellow-400 fill-cyan-400 fill-base-content fill-green-400 fill-primary fill-yellow-500 fill-red-500 fill-pink-400 fill-blue-300 fill-amber-500 fill-blue-500 " +
+    // 20% opacity variants for inner background
+    "fill-orange-500/20 fill-blue-400/20 fill-cyan-300/20 fill-yellow-400/20 fill-cyan-400/20 fill-base-content/20 fill-green-400/20 fill-primary/20 fill-yellow-500/20 fill-red-500/20 fill-pink-400/20 fill-blue-300/20 fill-amber-500/20 fill-blue-500/20";
 
   const tabs: TabItemType[] = Object.keys(skillsData).map((category) => ({
     id: category,
