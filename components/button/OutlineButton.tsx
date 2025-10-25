@@ -7,7 +7,7 @@ const OutlineButton: React.FC<OutlineButtonProps> = ({ children }) => {
     return (
       <Button
         variant="outline"
-        className="rounded-full hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+        className="rounded-full border-primary/50 cursor-pointer hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
       >
         {children}
       </Button>

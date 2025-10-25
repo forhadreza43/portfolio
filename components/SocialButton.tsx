@@ -1,16 +1,10 @@
 import React, { JSX } from "react";
-import { IconType } from "react-icons";
 import {
 
   FaGithub,
   FaLinkedin,
-
-  FaThreads,
   FaXTwitter,
   FaFacebook,
-  FaWhatsapp,
-  FaReddit,
-  FaTelegram,
 } from "react-icons/fa6";
 import { HiEnvelope } from "react-icons/hi2";
 
@@ -64,7 +58,7 @@ export default function SocialButton() {
               className="bg-primary/10 hover:bg-primary/20 duration-200 border border-primary/20 rounded-full text-xs font-semibold"
             >
               <span className="flex items-center py-1.5 px-1">
-                <span className="pl-2">{item.icon}</span>
+                <span className="pl-1.5">{item.icon}</span>
                 <span className="px-2 text-xs">{item.name}</span>
               </span>
             </Link>

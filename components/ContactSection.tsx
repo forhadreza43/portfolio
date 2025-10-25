@@ -11,7 +11,11 @@ import { toast } from "sonner";
 import { motion } from "motion/react";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
   const isActive = formData?.name && formData?.email && formData?.message;
   const sendEmail = (e: React.FormEvent) => {
@@ -89,7 +93,9 @@ export default function ContactSection() {
             />
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white"
+              className={`w-full bg-primary hover:bg-primary/90 text-white ${
+                (loading || !isActive) && "cursor-not-allowed"
+              }`}
               disabled={loading || !isActive}
             >
               {loading ? (

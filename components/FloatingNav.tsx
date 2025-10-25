@@ -12,7 +12,6 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import ResumeDownload from "./ResumeDownload";
-import Logo from "./Logo";
 import Profile from "./Profile";
 type NavItem = {
   name: string;

@@ -10,7 +10,6 @@ import { motion } from "motion/react";
 // import Lottie from "lottie-react";
 import ResumeDownload from "./ResumeDownload";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import hero from "@/assets/hero.png";
 import SocialButton from "./SocialButton";

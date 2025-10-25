@@ -80,7 +80,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           <p className="mb-4 text-justify text-sm sm:text-base md:text-md">
             {description}
           </p>
-          <h3 className="font-semibold sm:text-md lg:text-lg mb-1 mb-3">
+          <h3 className="font-semibold sm:text-md lg:text-lg mb-3">
             Key Features
           </h3>
           <ul className="list-decimal list-inside mb-4 space-y-1 text-sm sm:text-base md:text-md">
@@ -105,12 +105,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
         {/* Action Buttons */}
         <div className="flex gap-4">
           {liveLink && (
-            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer" >
               <PrimaryButton>Live Demo</PrimaryButton>
             </Link>
           )}
           {repoLink && (
-            <Link href={repoLink} target="_blank" rel="noopener noreferrer">
+            <Link href={repoLink} target="_blank" rel="noopener noreferrer" >
               <OutlineButton>Github Repo</OutlineButton>
             </Link>
           )}
