@@ -13,6 +13,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import hero from "@/assets/hero.png";
+import SocialButton from "./SocialButton";
 
 const Hero = () => {
   const words = ["Quick Learner", "Tech Enthusiast"];
@@ -91,42 +92,14 @@ const Hero = () => {
               transition={{ delay: 1.0, duration: 0.6 }}
               className="flex gap-3 mt-4"
             >
-              <a
-                href="https://linkedin.com/in/rezaforhad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0A66C2] hover:scale-110 transition-transform"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={28} />
-              </a>
-
-              <a
-                href="https://github.com/forhadreza43"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:scale-110 transition-transform"
-                aria-label="GitHub"
-              >
-                <FaGithub size={28} />
-              </a>
-
-              <a
-                href="https://twitter.com/forhadreza111"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1DA1F2] hover:scale-110 transition-transform"
-                aria-label="Twitter"
-              >
-                <FaTwitter size={28} />
-              </a>
+              <SocialButton />
             </motion.div>
             <div className="flex gap-3 md:gap-4 mt-4">
               <ResumeDownload />
               <Link href="#contact">
                 <Button
                   variant="outline"
-                  className="rounded-full hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+                  className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
                 >
                   Contact me
                 </Button>

@@ -102,7 +102,7 @@ export const FloatingNav = ({
               <div className="w-[160px] flex-shrink-0 transform -translate-x-2">
                 <Link
                   href="/"
-                  className="font-display text-xl font-bold transition-colors hover:text-primary"
+                  className="font-display text-xl font-bold transition-colors"
                 >
                   <motion.span
                     initial={{ opacity: 0, x: -40 }}
