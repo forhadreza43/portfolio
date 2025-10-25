@@ -1,15 +1,34 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
-import go1 from "@/assets/projectsInfo/godesh/1.png";
-import rec1 from "@/assets/projectsInfo/recipe/1.png";
-import study1 from "@/assets/projectsInfo/study/1.png";
+import { projects } from "@/data/projects";
+
+
 const Projects = () => {
   return (
     <div id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
       <SectionHeading>Projects</SectionHeading>
       <div className="flex flex-col gap-6">
-        <ProjectCard
+        {
+          /* Map through the projects array to render ProjectCard components */
+          projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              imageBg={project.imageBg}
+              order={project.order as 0 | 1}
+              imageUrl={project.imageUrl}
+              title={project.title}
+              description={project.description}
+              features={project.features}
+              techStack={project.techStack}
+              liveLink={project.liveLink}
+              repoLink={project.repoLink}
+            />
+          ))
+        }
+        {/* <ProjectCard
           imageUrl={go1}
           title="GoDesh"
           description="This Travel Management System is a role-based platform designed to optimize user
@@ -37,6 +56,7 @@ const Projects = () => {
           liveLink="https://godesh-1ab55.web.app"
           repoLink="https://github.com/forhadreza43/godesh-client"
         />
+
         <ProjectCard
           imageBg="bg-white"
           order={1}
@@ -86,7 +106,7 @@ A collaborative platform enabling students and evaluators to manage assignments 
           ]}
           liveLink="https://group-study-app-89073.web.app/"
           repoLink="https://github.com/forhadreza43/group-study-client"
-        />
+        /> */}
       </div>
     </div>
   );

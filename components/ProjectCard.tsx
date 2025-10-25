@@ -6,12 +6,21 @@ import { cn } from "@/lib/utils";
 import OutlineButton from "@/components/button/OutlineButton";
 import PrimaryButton from "./button/PrimaryButton";
 import { motion } from "motion/react";
+import TechStackGrid from "./TechStackGrid";
+import { IconType } from "react-icons";
+
+export type TechItem = {
+  icon: IconType;
+  name: string;
+  color: string;
+};
+
 interface ProjectProps {
   imageUrl: string | StaticImageData;
   title: string;
   description: string;
   features: string[];
-  techStack: string[];
+  techStack: TechItem[];
   liveLink?: string;
   repoLink?: string;
   imageBg?: string;
@@ -91,26 +100,19 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </div>
 
         {/* Technology badges */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {techStack.map((tech, idx) => (
-            <span
-              key={idx}
-              className="px-3 py-1 cursor-default bg-primary/20 border border-primary/40 rounded-full text-xs font-semibold"
-            >
-              {tech}
-            </span>
-          ))}
+        <div className="mb-4">
+          <TechStackGrid techStack={techStack} />
         </div>
 
         {/* Action Buttons */}
         <div className="flex gap-4">
           {liveLink && (
-            <Link href={liveLink} target="_blank" rel="noopener noreferrer" >
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
               <PrimaryButton>Live Demo</PrimaryButton>
             </Link>
           )}
           {repoLink && (
-            <Link href={repoLink} target="_blank" rel="noopener noreferrer" >
+            <Link href={repoLink} target="_blank" rel="noopener noreferrer">
               <OutlineButton>Github Repo</OutlineButton>
             </Link>
           )}
