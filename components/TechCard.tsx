@@ -1,7 +1,6 @@
-"use client"
+"use client";
 import { IconType } from "react-icons";
 import { useState } from "react";
-
 
 interface TechCardProps {
   icon: IconType;
@@ -14,7 +13,7 @@ export const TechCard = ({ icon: Icon, name, color }: TechCardProps) => {
 
   return (
     <div
-      className={`group relative h-8 rounded-full dark:bg-[#cee6f5] bg-[#003a59] border-1 border-primary/30 overflow-hidden transition-all duration-300 hover:border-primary/50 hover:z-20 flex items-center ${
+      className={`group relative h-8 rounded-full dark:bg-[#cee6f5] bg-[#003a59] border-1 border-primary/30 overflow-hidden transition-all duration-500 hover:border-primary/50 hover:z-20 flex items-center ${
         isHovered ? "w-auto px-4" : "w-8"
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -24,7 +23,7 @@ export const TechCard = ({ icon: Icon, name, color }: TechCardProps) => {
       <div className="relative flex items-center justify-center w-full gap-0">
         {/* Icon */}
         <Icon
-          className="transition-all duration-300 flex-shrink-0"
+          className="transition-all duration-500 flex-shrink-0"
           size={16}
           style={{
             color: color,
@@ -33,7 +32,7 @@ export const TechCard = ({ icon: Icon, name, color }: TechCardProps) => {
 
         {/* Name reveal on hover */}
         <span
-          className={`text-sm font-semibold whitespace-nowrap transition-all duration-500 cursor-default ${
+          className={`text-sm whitespace-nowrap transition-all duration-500 cursor-default ${
             isHovered ? "opacity-100 w-auto ml-2" : "opacity-0 w-0"
           }`}
         >
