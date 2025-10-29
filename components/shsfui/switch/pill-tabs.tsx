@@ -24,12 +24,7 @@ const MOCK_TABS: TabItemType[] = [
 
 const PillTabs = React.forwardRef<HTMLDivElement, PillTabsProps>(
   (props, ref) => {
-    const {
-      tabs = MOCK_TABS,
-      defaultActiveId,
-      onTabChange,
-      className,
-    } = props;
+    const { tabs = MOCK_TABS, defaultActiveId, onTabChange, className } = props;
 
     const [activeTab, setActiveTab] = React.useState(defaultActiveId);
 
@@ -56,7 +51,7 @@ const PillTabs = React.forwardRef<HTMLDivElement, PillTabsProps>(
             onClick={() => handleClick(tab.id)}
             className={cn(
               "relative px-4 py-2 rounded-full transition touch-none",
-              "text-sm font-medium text-foreground"
+              "text-sm font-medium text-foreground hover:bg-primary/20 transition-all duration-300"
             )}
           >
             {activeTab === tab.id && (
