@@ -3,19 +3,8 @@ import { cn } from "@/lib/utils";
 
 interface HexagonIconProps {
   children?: ReactNode;
-  // Accept direct color values (e.g., "#fff", "hsl(...)"), used when class props aren't provided
-  borderColor?: string;
-  // Prefer Tailwind fill classes when available (e.g., "fill-orange-500")
-  borderClass?: string;
-
   size?: "sm" | "md" | "lg" | "xl";
-  // Explicit icon size in pixels; if not provided, sized proportionally to hex size
-  iconSizePx?: number;
-  className?: string;
-  // Controls the inner hexagon fill color; use "transparent" to let parent bg show
-  innerFill?: string;
-  // Tailwind-driven inner fill (e.g., "fill-primary/5"); takes precedence over innerFill
-  innerFillClass?: string;
+  borderWidth?: number;
 }
 
 const sizeMap = {
@@ -25,19 +14,13 @@ const sizeMap = {
   xl: 160,
 };
 
-const HexagonIcon = ({
+const SkillCard = ({
   children,
-  borderColor = "hsl(12, 87%, 64%)",
-  borderClass,
-  size = "md",
-  iconSizePx,
-  className,
-  innerFill = "rgba(0, 169, 255, 0.5)",
-  innerFillClass,
+  size = "xl",
+  borderWidth = 1.5,
 }: HexagonIconProps) => {
   const dimension = sizeMap[size];
-  const borderWidth = 3;
-  const computedIconSize = iconSizePx ?? Math.round(dimension * 0.35);
+  const computedIconSize = Math.round(dimension * 0.35);
 
   // Create hexagon path with rounded corners
   const createHexagonPath = (width: number, height: number, radius: number) => {
@@ -94,8 +77,7 @@ const HexagonIcon = ({
   return (
     <div
       className={cn(
-        "relative inline-flex items-center justify-center transition-transform duration-300 hover:scale-105",
-        className
+        "relative inline-flex items-center justify-center transition-transform duration-300 hover:scale-105"
       )}
       style={{ width: dimension, height: dimension }}
     >
@@ -105,12 +87,22 @@ const HexagonIcon = ({
         viewBox={`0 0 ${dimension} ${dimension}`}
         className="absolute inset-0"
       >
+        <defs>
+          <filter id="hexShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow
+              dx="1"
+              dy="2"
+              stdDeviation="2"
+              flood-color="rgb(0,58,89)"
+              flood-opacity="0.20"
+            />
+          </filter>
+        </defs>
         {/* Outer hexagon (border) */}
         <path
           d={createHexagonPath(dimension, dimension, 8)}
-          {...(borderClass
-            ? { className: cn("fill-current", borderClass) }
-            : { fill: borderColor })}
+          className="dark:fill-[rgb(184,229,255)] fill-[rgb(0,58,89)]"
+          filter="url(#hexShadow)"
         />
 
         {/* Inner hexagon (background) */}
@@ -120,9 +112,7 @@ const HexagonIcon = ({
             dimension - borderWidth * 2,
             8
           )}
-          {...(innerFillClass
-            ? { className: cn("fill-current", innerFillClass) }
-            : { fill: innerFill })}
+          className="dark:fill-[rgb(227,244,255)] fill-[rgb(0,29,46)]"
           transform={`translate(${borderWidth}, ${borderWidth})`}
         />
       </svg>
@@ -138,4 +128,4 @@ const HexagonIcon = ({
   );
 };
 
-export default HexagonIcon;
+export default SkillCard;
