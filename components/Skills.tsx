@@ -38,6 +38,7 @@ import { RiJavascriptFill } from "react-icons/ri";
 import SectionHeading from "./SectionHeading";
 import { motion } from "motion/react";
 import PillTabs, { TabItemType } from "./shsfui/switch/pill-tabs";
+import SkillCard from "./SkillCard";
 
 type SkillData = {
   name: string;
@@ -50,7 +51,7 @@ const skillsData = {
   Web: [
     {
       name: "Next.js",
-      icon: <SiNextdotjs className="text-base-content" />,
+      icon: <SiNextdotjs className="text-base-content dark:text-gray-800" />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-base-content/40",
     },
@@ -80,7 +81,7 @@ const skillsData = {
     },
     {
       name: "Express.js",
-      icon: <SiExpress />,
+      icon: <SiExpress className="dark:text-gray-800" />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-base-content/30",
     },
@@ -125,7 +126,7 @@ const skillsData = {
     },
     {
       name: "GitHub",
-      icon: <FaGithub className="text-base-content" />,
+      icon: <FaGithub className="text-base-content dark:text-gray-800" />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-base-content/30",
     },
@@ -149,7 +150,7 @@ const skillsData = {
     },
     {
       name: "Vercel",
-      icon: <SiVercel />,
+      icon: <SiVercel className="dark:text-gray-800" />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-base-content/30",
     },
@@ -199,7 +200,7 @@ const skillsData = {
     },
     {
       name: "Notion",
-      icon: <SiNotion />,
+      icon: <SiNotion className="dark:text-gray-800" />,
       borderColor: "border-base-content",
       shadowColor: "hover:shadow-black/30 dark:hover:shadow-base-content/30",
     },
@@ -250,19 +251,20 @@ const Skills = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5 justify-items-center">
               {skillsData[activeTab as keyof typeof skillsData]?.map(
                 (skill: SkillData, index: number) => (
-                  <div
-                    key={index}
-                    className={cn(
-                      `w-full max-w-[11rem] bg-primary/5 rounded-md p-4 md:p-5 flex flex-col items-center justify-center text-center border border-primary/20 shadow-md transition-all ease-in-out duration-500 backdrop-blur-3xl hover:scale-105`
-                    )}
-                  >
-                    <div className="text-4xl md:text-5xl mt-2">
-                      {skill.icon}
-                    </div>
-                    <p className="mt-4 font-semibold md:text-lg">
-                      {skill.name}
-                    </p>
-                  </div>
+                  // <div
+                  //   key={index}
+                  //   className={cn(
+                  //     `w-full max-w-[11rem] bg-primary/5 rounded-md p-4 md:p-5 flex flex-col items-center justify-center text-center border border-primary/20 shadow-md transition-all ease-in-out duration-500 backdrop-blur-3xl hover:scale-105`
+                  //   )}
+                  // >
+                  //   <div className="text-4xl md:text-5xl mt-2">
+                  //     {skill.icon}
+                  //   </div>
+                  //   <p className="mt-4 font-semibold md:text-lg">
+                  //     {skill.name}
+                  //   </p>
+                  // </div>
+                  <SkillCard key={index}>{skill.icon}</SkillCard>
                 )
               )}
             </div>
