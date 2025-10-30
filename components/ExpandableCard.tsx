@@ -16,6 +16,7 @@ import Image from "next/image";
 import TechStackGrid from "./TechStackGrid";
 import Link from "next/link";
 import SectionHeading from "./SectionHeading";
+import { cn } from "@/lib/utils";
 
 export function ExpandableCard() {
   const [active, setActive] = useState<
@@ -169,6 +170,11 @@ export function ExpandableCard() {
                       ))}
                     </ul>
                   </div>
+                  {active.note && (
+                    <p className="text-xs text-red-500 pb-2">
+                      Note: {active.note}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -176,13 +182,21 @@ export function ExpandableCard() {
         ) : null}
       </AnimatePresence>
 
-      <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4">
+      <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 items-start gap-4">
         {projects.map((card) => (
           <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
-            // onClick={() => setActive(card)}
-            className="relative rounded-xl pt-0 shadow-lg overflow-hidden"
+            onClick={() => setActive(card)}
+            className={cn(
+              `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
+              { "lg:col-span-4": card.order === 0 },
+              { "lg:col-span-3": card.order === 1 || card.order === 2 }
+            )}
           >
             <div className="relative h-50 lg:h-60">
               <Image
