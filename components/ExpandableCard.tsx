@@ -213,45 +213,45 @@ export function ExpandableCard() {
                     href={card.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center hover:bg-primary rounded-full transition-all duration-300 hover:pr-2"
+                    className="group flex items-center rounded-full transition-all duration-300"
                   >
-                    <div className="rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
-                      <RiLink size={22} />
+                    <div className="flex px-2 items-center gap-1 rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
+                      <RiLink size={20} />
+                      <span
+                        className={` font-semibold text-sm text-white text-nowrap dark:text-black`}
+                      >
+                        Live Link
+                      </span>
                     </div>
-                    <span
-                      className={`hidden group-hover:block transition-all font-semibold duration-300 text-sm text-white text-nowrap dark:text-black`}
-                    >
-                      Live Link
-                    </span>
                   </Link>
                   <Link
                     href={card.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center hover:bg-primary rounded-full transition-all duration-300 hover:pr-2"
+                    className="group flex items-center rounded-full transition-all duration-300"
                   >
-                    <div className="rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1 hover:bg-primary text-white dark:text-black">
-                      <RiGithubFill size={26} />
+                    <div className=" flex items-center px-1 pr-2 gap-1 rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1 hover:bg-primary text-white dark:text-black">
+                      <RiGithubFill size={22} />
+                      <span
+                        className={`font-semibold text-sm text-white text-nowrap dark:text-black`}
+                      >
+                        Github Repo
+                      </span>
                     </div>
-                    <span
-                      className={`hidden font-semibold group-hover:block transition-all duration-300 text-sm text-white text-nowrap dark:text-black`}
-                    >
-                      Github Repo
-                    </span>
                   </Link>
 
                   <button
                     onClick={() => setActive(card)}
-                    className="group cursor-pointer flex items-center hover:bg-primary rounded-full transition-all duration-300 hover:pr-2"
+                    className="group cursor-pointer flex items-center rounded-full transition-all duration-300"
                   >
-                    <div className="rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
-                      <RiExternalLinkFill size={22} />
+                    <div className="rounded-full flex items-center gap-1 px-2 group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
+                      <RiExternalLinkFill size={18} />
+                      <span
+                        className={`font-semibold transition-all duration-300 text-sm text-white text-nowrap dark:text-black`}
+                      >
+                        Details
+                      </span>
                     </div>
-                    <span
-                      className={`hidden font-semibold group-hover:block transition-all duration-300 text-sm text-white text-nowrap dark:text-black`}
-                    >
-                      Details
-                    </span>
                   </button>
                 </div>
               </CardFooter>
