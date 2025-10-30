@@ -2,7 +2,7 @@ import { IconType } from "react-icons";
 import go1 from "@/assets/projectsInfo/godesh/1.png";
 import rec1 from "@/assets/projectsInfo/recipe/1.png";
 import study1 from "@/assets/projectsInfo/study/1.png";
-import eco from "@/assets/projectsInfo/ecovista/eco.png"
+import eco from "@/assets/projectsInfo/ecovista/eco.png";
 
 import {
   SiReactrouter,
@@ -32,7 +32,7 @@ export type Project = {
   }[];
   liveLink: string;
   repoLink: string;
-  note?:string;
+  note?: string;
 };
 
 export const projects = [
