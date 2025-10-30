@@ -191,7 +191,7 @@ export function ExpandableCard() {
             viewport={{ once: true }}
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
-            onClick={() => setActive(card)}
+            // onClick={() => setActive(card)}
             className={cn(
               `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
               { "lg:col-span-4": card.order === 0 },
