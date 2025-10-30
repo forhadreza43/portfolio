@@ -90,7 +90,7 @@ export function ExpandableCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-[rgb(0,29,46)] dark:bg-[rgb(227,244,255)] sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-full md:h-fit flex flex-col bg-[rgb(0,29,46)] dark:bg-[rgb(227,244,255)] sm:rounded-3xl overflow-hidden overflow-y-auto"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
