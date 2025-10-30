@@ -264,7 +264,7 @@ const Skills = () => {
                   //     {skill.name}
                   //   </p>
                   // </div>
-                  <SkillCard key={index}>{skill.icon}</SkillCard>
+                  <SkillCard key={index} name={skill.name}>{skill.icon}</SkillCard>
                 )
               )}
             </div>

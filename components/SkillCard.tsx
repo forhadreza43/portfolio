@@ -1,22 +1,25 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 interface HexagonIconProps {
   children?: ReactNode;
   size?: "sm" | "md" | "lg" | "xl";
   borderWidth?: number;
+  name: string;
 }
 
 const sizeMap = {
   sm: 64,
   md: 96,
   lg: 128,
-  xl: 160,
+  xl: 140,
 };
 
 const SkillCard = ({
   children,
   size = "xl",
+  name,
   borderWidth = 1.5,
 }: HexagonIconProps) => {
   const dimension = sizeMap[size];
@@ -75,56 +78,72 @@ const SkillCard = ({
   };
 
   return (
-    <div
-      className={cn(
-        "relative inline-flex items-center justify-center transition-transform duration-300 hover:scale-105"
-      )}
-      style={{ width: dimension, height: dimension }}
-    >
-      <svg
-        width={dimension}
-        height={dimension}
-        viewBox={`0 0 ${dimension} ${dimension}`}
-        className="absolute inset-0"
-      >
-        <defs>
-          <filter id="hexShadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow
-              dx="1"
-              dy="2"
-              stdDeviation="2"
-              flood-color="rgb(0,58,89)"
-              flood-opacity="0.20"
-            />
-          </filter>
-        </defs>
-        {/* Outer hexagon (border) */}
-        <path
-          d={createHexagonPath(dimension, dimension, 8)}
-          className="dark:fill-[rgb(184,229,255)] fill-[rgb(0,58,89)]"
-          filter="url(#hexShadow)"
-        />
-
-        {/* Inner hexagon (background) */}
-        <path
-          d={createHexagonPath(
-            dimension - borderWidth * 2,
-            dimension - borderWidth * 2,
-            8
+    <Tooltip>
+      <TooltipTrigger>
+        <div
+          className={cn(
+            "relative inline-flex items-center justify-center transition-transform hover:scale-105 duration-500 group"
           )}
-          className="dark:fill-[rgb(227,244,255)] fill-[rgb(0,29,46)]"
-          transform={`translate(${borderWidth}, ${borderWidth})`}
-        />
-      </svg>
+          style={{ width: dimension, height: dimension }}
+          aria-label={name}
+        >
+          <svg
+            width={dimension}
+            height={dimension}
+            viewBox={`0 0 ${dimension} ${dimension}`}
+            className="absolute inset-0"
+          >
+            <defs>
+              <filter
+                id="hexShadow"
+                x="-50%"
+                y="-50%"
+                width="200%"
+                height="200%"
+              >
+                <feDropShadow
+                  dx="1"
+                  dy="2"
+                  stdDeviation="2"
+                  flood-color="rgb(0,58,89)"
+                  flood-opacity="0.20"
+                />
+              </filter>
+            </defs>
+            {/* Outer hexagon (border) */}
+            <path
+              d={createHexagonPath(dimension, dimension, 8)}
+              className="dark:fill-[rgb(184,229,255)] fill-[rgb(0,58,89)]"
+              filter="url(#hexShadow)"
+            />
 
-      {/* Content */}
-      <div
-        className="relative z-10 text-white flex items-center justify-center"
-        style={{ fontSize: computedIconSize }}
-      >
-        {children}
-      </div>
-    </div>
+            {/* Inner hexagon (background) */}
+            <path
+              d={createHexagonPath(
+                dimension - borderWidth * 2,
+                dimension - borderWidth * 2,
+                8
+              )}
+              className="dark:fill-[rgb(227,244,255)] fill-[rgb(0,29,46)]"
+              transform={`translate(${borderWidth}, ${borderWidth})`}
+              pointerEvents="visiblePainted"
+            />
+          </svg>
+
+          {/* Content */}
+          <div
+            className="relative z-10 flex items-center justify-center"
+            style={{ fontSize: computedIconSize }}
+          >
+            {children}
+            {/* <p className="text-nowrap text-xs font-semibold group-hover:opacity-100 opacity-0 transition-opacity duration-500 absolute -bottom-4 left-0 right-0 text-center">
+          {name}
+        </p> */}
+          </div>
+        </div>
+      </TooltipTrigger>
+      <TooltipContent sideOffset={-11}>{name}</TooltipContent>
+    </Tooltip>
   );
 };
 
