@@ -203,8 +203,8 @@ export function ExpandableCard() {
                 src={card.imageUrl}
                 alt={card.title}
                 className="object-cover w-full h-full"
-                width={200}
-                height={200}
+                width={1920}
+                height={1080}
               />
             </div>
             <Card className="border border-primary/20 bg-primary/5 rounded-t-none">
