@@ -56,7 +56,7 @@ export function ExpandableCard() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/40 h-full w-full z-10"
+            className="fixed inset-0 bg-black/60 h-full w-full z-10"
           />
         )}
       </AnimatePresence>
@@ -104,7 +104,7 @@ export function ExpandableCard() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
+                <div className="p-4">
                   <div className="">
                     <div className="flex items-center justify-between">
                       <motion.h2
@@ -217,7 +217,7 @@ export function ExpandableCard() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-white dark:text-gray-800 font-light text-base-content/70 max-h-[4.5em] overflow-hidden line-clamp-3 wrap-break-word break-all hyphens-auto">
+                <div className="text-white dark:text-gray-800 font-light text-base-content/70 h-[4.5em] overflow-hidden line-clamp-3 wrap-break-word break-all hyphens-auto">
                   {card.description}
                 </div>
               </CardContent>
@@ -234,7 +234,7 @@ export function ExpandableCard() {
                       <span
                         className={` font-semibold text-sm text-white text-nowrap dark:text-black`}
                       >
-                        Live Link
+                        Live
                       </span>
                     </div>
                   </Link>
