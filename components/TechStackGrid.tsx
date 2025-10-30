@@ -17,7 +17,7 @@ const TechStackGrid = ({ techStack }: TechStackGridProps) => {
             style={{
               animationDelay: `${index * 50}ms`,
               animationFillMode: "backwards",
-              marginLeft: index > 0 ? "-6px" : "0",
+              marginLeft: index > 0 ? "-4px" : "0",
             }}
           >
             <TechCard {...tech} />

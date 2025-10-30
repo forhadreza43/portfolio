@@ -6,10 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Loader2Icon, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "./SectionHeading";
-import emailjs from "emailjs-com";
 import { toast } from "sonner";
 import { motion } from "motion/react";
-
+import emailjs from "@emailjs/browser";
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -22,8 +21,7 @@ export default function ContactSection() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
+    emailjs.send(
         "service_ue70kok",
         "template_op8mbcw",
         {

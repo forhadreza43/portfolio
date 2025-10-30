@@ -1,3 +1,4 @@
+import { IconType } from "react-icons";
 import go1 from "@/assets/projectsInfo/godesh/1.png";
 import rec1 from "@/assets/projectsInfo/recipe/1.png";
 import study1 from "@/assets/projectsInfo/study/1.png";
@@ -14,7 +15,24 @@ import {
   BiLogoFirebase,
   BiLogoStripe,
 } from "react-icons/bi";
-import { RiNextjsFill, RiNextjsLine } from "react-icons/ri";
+import { RiNextjsLine } from "react-icons/ri";
+
+export type Project = {
+  imageBg: string;
+  order: 0 | 1;
+  imageUrl: string;
+  title: string;
+  description: string;
+  features: string[];
+  techStack: {
+    icon: IconType;
+    name: string;
+    color: string;
+  }[];
+  liveLink: string;
+  repoLink: string;
+};
+
 export const projects = [
   {
     imageBg: "bg-green-100",

@@ -13,7 +13,7 @@ const sizeMap = {
   sm: 64,
   md: 96,
   lg: 128,
-  xl: 140,
+  xl: 160,
 };
 
 const SkillCard = ({
@@ -105,8 +105,8 @@ const SkillCard = ({
                   dx="1"
                   dy="2"
                   stdDeviation="2"
-                  flood-color="rgb(0,58,89)"
-                  flood-opacity="0.20"
+                  floodColor="rgb(0,58,89)"
+                  floodOpacity="0.20"
                 />
               </filter>
             </defs>

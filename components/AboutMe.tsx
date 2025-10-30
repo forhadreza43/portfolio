@@ -15,7 +15,7 @@ const AboutMe = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70">
+        <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
           I&apos;m a passionate MERN Stack developer with a strong foundation in
           building dynamic, scalable, and user-focused web applications.
           Proficient in MongoDB, Express.js, React, and Node.js, I thrive on

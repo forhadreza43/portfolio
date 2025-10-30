@@ -11,17 +11,17 @@ import {
   FaBolt,
 } from "react-icons/fa";
 import {
-  SiJavascript,
+  // SiJavascript,
   SiTailwindcss,
   SiExpress,
   SiMongodb,
-  SiHtml5,
-  SiCss3,
+  // SiHtml5,
+  // SiCss3,
   SiCanva,
-  SiAdobexd,
+  // SiAdobexd,
   SiAdobephotoshop,
   SiNotion,
-  SiTrello,
+  // SiTrello,
   SiNetlify,
   SiVercel,
   SiReactquery,
@@ -29,7 +29,7 @@ import {
   SiJsonwebtokens,
   SiNextdotjs,
   SiMysql,
-  SiPostgresql,
+  // SiPostgresql,
   SiAdobeillustrator,
 } from "react-icons/si";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
@@ -244,7 +244,7 @@ const Skills = () => {
                 tabs={tabs}
                 defaultActiveId="Web"
                 onTabChange={handleTabChange}
-                className="backdrop-blur-md border-1 border-primary/20"
+                className="backdrop-blur-md border border-primary/20"
               />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5 justify-items-center">
