@@ -2,6 +2,7 @@ import { IconType } from "react-icons";
 import go1 from "@/assets/projectsInfo/godesh/1.png";
 import rec1 from "@/assets/projectsInfo/recipe/1.png";
 import study1 from "@/assets/projectsInfo/study/1.png";
+import eco from "@/assets/projectsInfo/ecovista/eco.png"
 
 import {
   SiReactrouter,
@@ -19,7 +20,7 @@ import { RiNextjsLine } from "react-icons/ri";
 
 export type Project = {
   imageBg: string;
-  order: 0 | 1;
+  order: 0 | 1 | 2;
   imageUrl: string;
   title: string;
   description: string;
@@ -31,6 +32,7 @@ export type Project = {
   }[];
   liveLink: string;
   repoLink: string;
+  note?:string;
 };
 
 export const projects = [
@@ -60,6 +62,7 @@ export const projects = [
     ],
     liveLink: "https://godesh-1ab55.web.app",
     repoLink: "https://github.com/forhadreza43/godesh-client",
+    note: "",
   },
   {
     imageBg: "bg-white",
@@ -83,10 +86,11 @@ export const projects = [
     ],
     liveLink: "https://recipe-book-next-mu.vercel.app/",
     repoLink: "https://github.com/forhadreza43/recipe-book-next",
+    note: "",
   },
   {
     imageBg: "bg-pink-50",
-    order: 0,
+    order: 2,
     imageUrl: study1,
     title: "Study Together",
     description:
@@ -105,8 +109,33 @@ export const projects = [
       { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
       { icon: BiLogoFirebase, name: "Firebase", color: "#FFCA28" },
       { icon: SiReactrouter, name: "React-Router", color: "#CA4242" },
+      { icon: BiLogoTailwindCss, name: "Tailwind CSS", color: "#06B6D4" },
     ],
     liveLink: "https://group-study-app-89073.web.app/",
     repoLink: "https://github.com/forhadreza43/group-study-client",
+    note: "",
+  },
+  {
+    imageBg: "bg-green-50",
+    order: 0,
+    imageUrl: eco,
+    title: "Eco Vista",
+    description:
+      "A modern, responsive weather dashboard. Eco Vista provides comprehensive weather information including current conditions, temperature, wind data, and air quality metrics for locations worldwide.",
+    features: [
+      "Show Temperature",
+      "Show current weather",
+      "Show wind speed",
+      "Provide air quality with various matrix",
+      "Also can change location",
+    ],
+    techStack: [
+      { icon: RiNextjsLine, name: "Next.js", color: "#FFFFFF" },
+      { icon: BiLogoTailwindCss, name: "Tailwind CSS", color: "#06B6D4" },
+      { icon: SiReactquery, name: "Tanstack Query", color: "#E10098" },
+    ],
+    liveLink: "https://eco-vista-azure.vercel.app/",
+    repoLink: "https://github.com/forhadreza43/eco-vista",
+    note: "Need Location Access",
   },
 ];
