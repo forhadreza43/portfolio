@@ -11,9 +11,9 @@ export default function Home() {
       <div>
         <Hero />
         <AboutMe />
-        <Skills />
         {/* <BentoCardComponent/> */}
         <ExpandableCard />
+        <Skills />
         {/* <Projects /> */}
         <ContactSection />
       </div>
