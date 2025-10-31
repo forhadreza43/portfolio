@@ -95,8 +95,8 @@ export function ExpandableCard() {
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
-                  width={250}
-                  height={200}
+                  width={1920}
+                  height={1080}
                   src={active.imageUrl}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
