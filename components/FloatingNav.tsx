@@ -27,7 +27,7 @@ export const FloatingNav = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("/");
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
   const { theme } = useTheme();
 
   // Smooth scroll handler
@@ -98,7 +98,7 @@ export const FloatingNav = ({
           <ThreeDCard className="w-full">
             <div className="flex items-center justify-between gap-4">
               {/* Logo */}
-              <div className="w-[160px] flex-shrink-0 transform -translate-x-2">
+              <div className="w-[160px] shrink-0 transform -translate-x-2">
                 <Link
                   href="/"
                   className="font-display text-xl font-bold transition-colors"
@@ -157,7 +157,7 @@ export const FloatingNav = ({
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, type: "spring" }}
-                  className="md:hidden flex-shrink-0"
+                  className="md:hidden shrink-0"
                 >
                   <SheetTrigger asChild>
                     <Button
