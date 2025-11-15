@@ -194,7 +194,7 @@ export function ExpandableCard() {
             // onClick={() => setActive(card)}
             className={cn(
               `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
-              { "lg:col-span-4": card.order === 0 },
+              { "lg:col-span-4": card.order === 0 || card.order === 3 },
               { "lg:col-span-3": card.order === 1 || card.order === 2 }
             )}
           >

@@ -24,7 +24,7 @@ interface ProjectProps {
   liveLink?: string;
   repoLink?: string;
   imageBg?: string;
-  order?: 0 | 1;
+  order?: 0 | 1 | 2 | 3;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
