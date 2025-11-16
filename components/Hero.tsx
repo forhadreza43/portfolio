@@ -18,7 +18,10 @@ const Hero = () => {
   const words = ["Quick Learner", "Tech Enthusiast"];
 
   return (
-    <div id="home" className="relative overflow-hidden w-full min-h-[70vh]">
+    <div
+      id="home"
+      className="relative overflow-hidden w-full min-h-[70vh]"
+    >
       <GridPattern
         width={150}
         height={150}
@@ -41,7 +44,7 @@ const Hero = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-16">
           {/* left side */}
           <motion.div
-            className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left"
+            className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left relative "
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -108,7 +111,7 @@ const Hero = () => {
 
           {/* right side */}
           <motion.div
-            className="flex z-1 justify-center lg:justify-end w-full lg:w-1/2"
+            className="flex relative z-0 justify-center lg:justify-end w-full lg:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -121,7 +124,7 @@ const Hero = () => {
             <Image
               src={hero}
               alt="Coding animation"
-              className="rounded-full w-[450px] h-auto"
+              className="rounded-full w-[450px] h-auto relative z-0"
               width={1321}
               height={1321}
               priority

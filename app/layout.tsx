@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/animation/BackToTop";
+import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,16 +38,23 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head></head>
       <body
-        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
+        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased `}
       >
         <ThemeProvider>
-          <main className="relative w-full overflow-hidden">
-          <BackToTop />
-          <Toaster position="top-center" expand={false} richColors closeButton />
+          <div className="relative w-full overflow-hidden">
+            <BackToTop />
+            <Toaster
+              position="top-center"
+              expand={false}
+              richColors
+              closeButton
+            />
             {/* <Hero /> */}
-            {children}
-            <Footer />
-          </main>
+            <div className="relative z-20 overflow-hidden bg-clip-text">
+              {children}
+              <Footer />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -1,15 +1,18 @@
-"use client"
+"use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import { motion } from "motion/react";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="scroll-mt-30 mx-auto mt-12 lg:mt-20">
+    <section
+      id="about"
+      className="scroll-mt-30 mx-auto mt-12 lg:mt-20 relative"
+    >
       <SectionHeading>About me</SectionHeading>
 
       <motion.div
-        className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20"
+        className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20 relative"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

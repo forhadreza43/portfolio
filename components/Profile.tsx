@@ -9,7 +9,7 @@ export default function Profile({name = ""}: {name: string}) {
         alt="Profile"
         width={100}
         height={100}
-        className="rounded-full w-7 md:w-8 lg:w-9 h-auto object-cover"
+        className="rounded-full w-7 md:w-8 lg:w-9 h-auto object-cover relative z-0"
       />
       <p className="text-md md:text-lg lg:text-2xl font-bold text-nowrap">
         {name}

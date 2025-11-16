@@ -198,16 +198,16 @@ export function ExpandableCard() {
               { "lg:col-span-3": card.order === 1 || card.order === 2 }
             )}
           >
-            <div className="relative h-50 lg:h-60">
+            <div className="relative h-50 lg:h-60 z-0">
               <Image
                 src={card.imageUrl}
                 alt={card.title}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full relative z-0"
                 width={1920}
                 height={1080}
               />
             </div>
-            <Card className="border border-primary/20 bg-primary/5 rounded-t-none">
+            <Card className="border border-primary/20 bg-primary/5 rounded-t-none relative z-0">
               <CardHeader>
                 <CardTitle className="text-white dark:text-gray-800 text-lg">
                   {card.title}

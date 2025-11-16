@@ -52,7 +52,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       {/* Left - Image Container */}
       <motion.div
         className={cn(
-          "lg:w-1/2 rounded-md border border-gray-300 flex items-center justify-center",
+          "lg:w-1/2 rounded-md border border-gray-300 flex items-center justify-center relative z-0",
           imageBg
         )}
         initial={{ opacity: 0, x: order === 0 ? -50 : 50 }}
@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         <Image
           src={imageUrl}
           alt={`${title} screenshot`}
-          className="w-full h-auto rounded-md object-cover"
+          className="w-full h-auto rounded-md object-cover relative z-0"
           style={{ objectFit: "cover" }}
           priority
           placeholder="blur"
@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         className={cn(
           `lg:w-1/2 flex flex-col justify-between ${
             order === 1 ? "lg:pr-6" : "lg:pl-6"
-          } pt-4 lg:pt-0`
+          } pt-4 lg:pt-0 relative`
         )}
         initial={{ opacity: 0, x: order === 0 ? 50 : -50 }}
         whileInView={{ opacity: 1, x: 0 }}
