@@ -4,9 +4,9 @@ import { Download } from 'lucide-react';
 
 const ResumeDownload = () => {
    const handleDownload = () => {
+      const fileId = '1H0CqpI2EBMKySfbUVwWnhrobqWXPW0NT';
       const link = document.createElement('a');
-      link.href =
-         'https://docs.google.com/document/d/1taQJ8fEOFbiTQiMj4WPPKQiOyFFqglEAh_7CPSOAjm0/export?format=pdf';
+      link.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
       link.download = 'Forhad_Reza_Resume.pdf';
       link.target = '_blank';
       document.body.appendChild(link);
