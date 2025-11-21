@@ -4,14 +4,14 @@ import { Button } from '../ui/button';
 type OutlineButtonProps = React.PropsWithChildren<object>;
 
 const OutlineButton: React.FC<OutlineButtonProps> = ({ children }) => {
-    return (
+   return (
       <Button
-        variant="outline"
-        className="rounded-full border-primary/50 cursor-pointer hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+         variant="outline"
+         className="rounded-full border-primary/50 cursor-pointer hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
       >
-        {children}
+         {children}
       </Button>
-    );
+   );
 };
 
 export default OutlineButton;

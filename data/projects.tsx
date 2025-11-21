@@ -19,7 +19,7 @@ import {
    BiLogoStripe,
 } from 'react-icons/bi';
 import { RiNextjsLine } from 'react-icons/ri';
-import BetterAUth from './BetterAUthIcon';
+import BetterAUth from './icons/BetterAUthIcon';
 
 export type Project = {
    imageBg?: string;

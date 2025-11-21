@@ -28,7 +28,6 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my skil
 - **Magic UI**: Beautiful, animated components
 - **Custom Components**: Tailored UI elements
 
-
 ### Development Tools
 
 - **Linting**: ESLint
@@ -159,7 +158,6 @@ The portfolio is fully responsive and optimized for:
 - **LinkedIn**: [Forhad Reza](https://linkedin.com/in/rezaforhad)
 - **GitHub**: [@forhadreza43](https://github.com/forhadreza43)
 - **Portfolio**: [Live Demo](https://your-portfolio-url.com)
-
 
 ## 🙏 Acknowledgments
 
