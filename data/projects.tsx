@@ -63,7 +63,7 @@ export const projects = [
          { icon: BiLogoFirebase, name: 'Firebase', color: '#FFCA28' },
          { icon: BiLogoStripe, name: 'Stripe', color: '#6772E5' },
       ],
-      liveLink: 'https://godesh-1ab55.web.app',
+      liveLink: 'https://godesh.vercel.app',
       repoLink: 'https://github.com/forhadreza43/godesh-client',
       note: '',
    },
