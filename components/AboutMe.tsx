@@ -21,8 +21,8 @@ const AboutMe = () => {
             <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
                I&apos;m a passionate MERN Stack developer with a strong
                foundation in building dynamic, scalable, and user-focused web
-               applications. Proficient in MongoDB, Express.js, React, and
-               Node.js, I thrive on transforming ideas into seamless digital
+               applications. Proficient in React, Next.js, MongoDB, Express.js, and
+               Node.js, Mongoose, Prisma, PostgreSQL, I thrive on transforming ideas into seamless digital
                experiences. With a keen eye for detail and a commitment to
                writing clean, efficient code, I specialize in crafting
                responsive front-end interfaces and robust back-end systems. My
