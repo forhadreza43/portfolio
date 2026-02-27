@@ -23,7 +23,7 @@ const events: TimelineEvent[] = [
       institution: 'Green University of Bangladesh (GUB)',
       description:
          'Graduated with a strong foundation in software development, algorithms, and system design. My academic journey equipped me with the skills and knowledge to excel in the tech industry.',
-      
+
       side: 'right',
    },
    {
@@ -32,7 +32,7 @@ const events: TimelineEvent[] = [
       institution: 'Bangladesh Institute of Marine Technology (BIMT)',
       description:
          'Completed a comprehensive diploma program focused on shipbuilding technology, gaining practical skills in marine engineering, design, and construction. This experience provided me with a unique perspective on complex systems and project management.',
-  
+
       side: 'left',
    },
    {
@@ -76,16 +76,17 @@ const TimelineCard = ({
 
    const card = (
       <div
-         className={`rounded-xl shadow-md bg-primary/5 border border-primary/20 p-4 md:p-6 transition-all duration-500 text-left ${
+         // rounded-xl shadow-md bg-primary/5 border border-primary/20 p-4 md:p-6
+         className={` transition-all duration-500 text-left ${
             isActive ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-2'
          } ${isLeft ? 'md:text-right' : 'md:text-left'}`}
       >
-         <h3 className="text-lg md:text-xl font-bold text-base-content/80 mb-3">
+         <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
             {event.nameOfDegree}
          </h3>
 
          {event.institution && (
-            <p className="text-sm md:text-base text-base-content/80 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-400 dark:text-gray-600 leading-relaxed">
                {event.institution}
             </p>
          )}
@@ -109,7 +110,7 @@ const TimelineCard = ({
                   className={`w-6 h-6 absolute rounded-full transition-all duration-500 bg-primary/20`}
                />
             </div>
-            <div className={`w-5/12 flex justify-start -mt-3`}>
+            <div className={`w-5/11 flex justify-start -mt-3`}>
                {!isLeft ? card : dateBadge}
             </div>
          </div>
@@ -135,7 +136,7 @@ const TimelineCard = ({
    );
 };
 
-const Timeline = () => {
+const EducationTimeline = () => {
    const containerRef = useRef<HTMLDivElement>(null);
    const [scrollProgress, setScrollProgress] = useState(0);
    const [activeIndices, setActiveIndices] = useState<Set<number>>(
@@ -189,7 +190,7 @@ const Timeline = () => {
                style={{ height: `${scrollProgress * 100}%` }}
             />
 
-            <div className="space-y-16">
+            <div className="space-y-16 md:space-y-24">
                {events.map((event, index) => (
                   <div
                      key={index}
@@ -209,4 +210,4 @@ const Timeline = () => {
    );
 };
 
-export default Timeline;
+export default EducationTimeline;
