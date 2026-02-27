@@ -75,7 +75,7 @@ const Hero = () => {
                      Web Developer
                   </motion.h2> */}
 
-                  <h2 className="text-base sm:text-lg md:text-xl font-mono text-primary font-medium text-base-content/80">
+                  {/* <h2 className="text-base sm:text-lg md:text-xl font-mono text-primary font-medium text-base-content/80">
                      <Typewriter
                         words={words}
                         loop={100}
@@ -84,7 +84,7 @@ const Hero = () => {
                         typeSpeed={100}
                         deleteSpeed={50}
                      />
-                  </h2>
+                  </h2> */}
 
                   <motion.p
                      className="text-sm sm:text-base md:text-md text-base-content/70 max-w-xl"

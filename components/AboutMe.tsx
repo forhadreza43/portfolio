@@ -1,5 +1,5 @@
 'use client';
-import hero from '@/assets/hero.png';
+import person1 from '@/assets/2.png';
 import Image from 'next/image';
 import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
@@ -64,11 +64,11 @@ const AboutMe = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
          >
             <Image
-               src={hero}
-               alt="Coding animation"
-               className="rounded-full w-112.5 h-auto relative z-0"
-               width={1321}
-               height={1321}
+               src={person1}
+               alt="Profile image"
+               className="rounded-lg w-112.5 h-auto relative z-0"
+               width={3072}
+               height={3072}
                priority
                placeholder="blur"
             />
