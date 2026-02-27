@@ -34,7 +34,6 @@ const events: TimelineEvent[] = [
       //    },
       // ],
    },
-
 ];
 
 const TimelineCard = ({ event }: { event: TimelineEvent }) => {
@@ -57,9 +56,11 @@ const TimelineCard = ({ event }: { event: TimelineEvent }) => {
          {event.responsibilities && (
             <div className="mt-4 space-y-1 text-sm text-foreground/80">
                {event.responsibilities.map((resp, idx) => (
-                  <div key={idx} className="flex gap-2 items-center">
-                     <CircleCheck size={15} className="text-gray-400" />{' '}
-                     <p className="text-gray-400">{resp}</p>
+                  <div key={idx} className="flex gap-2 items-start">
+                     <span className="shrink-0 text-gray-400 mt-1 md:mt-0.75">
+                        <CircleCheck className="w-4 h-4" />
+                     </span>
+                     <p className="text-gray-400 leading-relaxed">{resp}</p>
                   </div>
                ))}
             </div>
