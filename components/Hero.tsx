@@ -38,7 +38,7 @@ const Hero = () => {
          <FloatingNav navItems={navItems} />
 
          <section className="pt-28 md:pt-40 mx-auto">
-            <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-16">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-16">
                {/* left side */}
                <motion.div
                   className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left relative "
