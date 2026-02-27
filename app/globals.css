@@ -102,6 +102,10 @@
    --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
    --sidebar-border: oklch(0.929 0.013 255.508);
    --sidebar-ring: oklch(0.704 0.04 256.788);
+
+   --timeline-line: 220 10% 25%;
+   --timeline-dot: 220 14% 20%;
+   --timeline-dot-border: 220 10% 30%;
 }
 .dark {
    --background: oklch(0.9772 0.0127 234.69);

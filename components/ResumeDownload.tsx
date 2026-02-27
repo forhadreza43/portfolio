@@ -17,7 +17,7 @@ const ResumeDownload = () => {
    return (
       <Button
          onClick={handleDownload}
-         className="rounded-full flex items-center gap-2"
+         className="rounded-full flex items-center gap-2 text-white"
          aria-label="Download Resume"
       >
          <Download className="w-4 h-4" />

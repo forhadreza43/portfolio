@@ -7,7 +7,7 @@ import { projects } from '@/data/projects';
 
 const Projects = () => {
    return (
-      <div id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
+      <section id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
          <SectionHeading>Projects</SectionHeading>
          <div className="flex flex-col gap-6">
             {
@@ -28,7 +28,7 @@ const Projects = () => {
                ))
             }
          </div>
-      </div>
+      </section>
    );
 };
 
