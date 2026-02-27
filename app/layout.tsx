@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Geist, Geist_Mono, Poppins, Caveat } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 // import Hero from "@/components/Hero";
@@ -24,6 +24,11 @@ const poppins = Poppins({
    weight: ['400', '500', '600', '700'],
 });
 
+const caveat = Caveat({
+   variable: '--font-caveat',
+   subsets: ['latin'],
+});
+
 export const metadata: Metadata = {
    title: 'Forhad Reza',
    description: 'MERN Stack Developer',
@@ -38,7 +43,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
          <head></head>
          <body
-            className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased`}
+            className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
          >
             <ThemeProvider>
                <div className="relative w-full overflow-hidden">

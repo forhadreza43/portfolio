@@ -98,7 +98,7 @@ export const FloatingNav = ({
                <ThreeDCard className="w-full">
                   <div className="flex items-center justify-between gap-4">
                      {/* Logo */}
-                     <div className="w-[160px] shrink-0 transform -translate-x-2">
+                     <div className="w-40 shrink-0 transform -translate-x-2">
                         <Link
                            href="/"
                            className="font-display text-xl font-bold transition-colors"
@@ -144,7 +144,7 @@ export const FloatingNav = ({
                      </div>
 
                      {/* Theme + Resume (desktop only) */}
-                     <div className="flex items-center justify-end gap-3 w-[200px]">
+                     <div className="flex items-center justify-end gap-3 w-50">
                         <ThemeToggle />
                         <span className="hidden lg:flex">
                            <ResumeDownload />

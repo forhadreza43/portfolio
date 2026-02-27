@@ -9,6 +9,7 @@ import SectionHeading from './SectionHeading';
 import { toast } from 'sonner';
 import { motion } from 'motion/react';
 import emailjs from '@emailjs/browser';
+import SectionTitle from './SectionTitle';
 export default function ContactSection() {
    const [formData, setFormData] = useState({
       name: '',
@@ -48,10 +49,59 @@ export default function ContactSection() {
    };
 
    return (
-      <section id="contact" className="scroll-mt-30 mt-12 lg:mt-20">
-         <SectionHeading>Contact</SectionHeading>
-
+      <section id="contact" className="container">
          <div className="grid md:grid-cols-2 gap-6 mx-auto">
+            {/* Contact Information */}
+            <motion.div
+               className="p-6 flex flex-col gap-10 justify-between rounded-lg shadow-md bg-primary/5 border border-primary/20 "
+               initial={{ opacity: 0, x: 50 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               transition={{ duration: 0.6, ease: 'easeOut' }}
+               viewport={{ once: true }}
+            >
+               <div>
+                  <SectionHeading>Contact Me</SectionHeading>
+                  <SectionTitle className="pt-3 pb-4">Let's talk!</SectionTitle>
+                  <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
+                     Feel free to reach out! I'm here to help and will respond
+                     within 24 hours. Your questions matter to me!
+                  </p>
+               </div>
+
+               <div className="flex flex-col justify-center gap-2">
+                  <motion.div
+                     className="flex items-center gap-3"
+                     initial={{ opacity: 0, y: 50 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
+                     viewport={{ once: true }}
+                  >
+                     <Mail className="text-primary" />
+                     <span className="md:text-lg">forhad.bimt@gmail.com</span>
+                  </motion.div>
+                  <motion.div
+                     className="flex items-center gap-3"
+                     initial={{ opacity: 0, y: 50 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
+                     viewport={{ once: true }}
+                  >
+                     <FaWhatsapp size={22} className="text-primary" />
+                     <span className="md:text-lg">+88 01798 182763</span>
+                  </motion.div>
+                  <motion.div
+                     className="flex items-center gap-3"
+                     initial={{ opacity: 0, y: 50 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ delay: 0.9, duration: 0.6, ease: 'easeOut' }}
+                     viewport={{ once: true }}
+                  >
+                     <MapPin className="text-primary" />
+                     <span className="md:text-lg">Dhaka, Bangladesh</span>
+                  </motion.div>
+               </div>
+            </motion.div>
+
             {/* Contact Form */}
             <motion.div
                className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20"
@@ -107,46 +157,6 @@ export default function ContactSection() {
                      )}
                   </Button>
                </form>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-               className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20 flex flex-col justify-center gap-6"
-               initial={{ opacity: 0, x: 50 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               transition={{ duration: 0.6, ease: 'easeOut' }}
-               viewport={{ once: true }}
-            >
-               <motion.div
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-               >
-                  <Mail className="text-primary" />
-                  <span className="md:text-lg">forhad.bimt@gmail.com</span>
-               </motion.div>
-               <motion.div
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-               >
-                  <FaWhatsapp size={22} className="text-primary" />
-                  <span className="md:text-lg">+88 01798 182763</span>
-               </motion.div>
-               <motion.div
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9, duration: 0.6, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-               >
-                  <MapPin className="text-primary" />
-                  <span className="md:text-lg">Dhaka, Bangladesh</span>
-               </motion.div>
             </motion.div>
          </div>
       </section>

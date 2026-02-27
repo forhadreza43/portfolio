@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { GridPattern } from './magicui/grid-pattern';
 import { FloatingNav } from './FloatingNav';
 import { navItems } from '@/data/navItem';
@@ -13,6 +12,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import hero from '@/assets/hero.png';
 import SocialButton from './SocialButton';
+import SectionTitle from './SectionTitle';
 
 const Hero = () => {
    const words = ['Quick Learner', 'Tech Enthusiast'];
@@ -30,7 +30,7 @@ const Hero = () => {
                [4, 4],
             ]}
             className={cn(
-               '[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] opacity-50'
+               'mask-[radial-gradient(400px_circle_at_center,white,transparent)] opacity-50'
             )}
          />
 
@@ -46,26 +46,36 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                >
-                  <p className="text-primary text-lg md:text-xl font-semibold -mb-3">
+                  {/* <p className="text-primary text-lg md:text-xl font-semibold -mb-3">
                      Hello! I am,
-                  </p>
-                  <motion.h1
-                     className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-base-content"
+                  </p> */}
+
+                  {/* new content  */}
+                  <motion.p
+                     className="text-2xl md:text-3xl font-light  font-caveat"
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.4, duration: 0.6 }}
                   >
                      Forhad <span className="text-primary">Reza</span>
-                  </motion.h1>
-                  <motion.h2
-                     className="text-base sm:text-lg md:text-xl font-medium text-base-content/80"
+                  </motion.p>
+
+                  <SectionTitle className="text-xl md:text-3xl lg:text-4xl font-semibold">
+                     Your go-to engineer for React.js & Next.js projects
+                  </SectionTitle>
+
+                  {/* old content  */}
+
+                  {/* <motion.h2
+                     className="text-base sm:text-lg md:text-xl font-mono font-medium text-base-content/80"
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.4, duration: 0.6 }}
                   >
-                     MERN Stack Developer
-                  </motion.h2>
-                  <h2 className="text-base sm:text-lg md:text-xl text-primary font-medium text-base-content/80">
+                     Web Developer
+                  </motion.h2> */}
+
+                  <h2 className="text-base sm:text-lg md:text-xl font-mono text-primary font-medium text-base-content/80">
                      <Typewriter
                         words={words}
                         loop={100}
@@ -75,15 +85,16 @@ const Hero = () => {
                         deleteSpeed={50}
                      />
                   </h2>
+
                   <motion.p
                      className="text-sm sm:text-base md:text-md text-base-content/70 max-w-xl"
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.8, duration: 0.6 }}
                   >
-                     I build modern web applications with a focus on
-                     performance, accessibility, and great user experience.
-                     Let&apos;s create something amazing together!
+                     Bringing your ideas to life with clean, efficient, and
+                     scalable code. Whether it's building web apps, optimizing
+                     performance, or solving complex technical challenges.
                   </motion.p>
                   <motion.div
                      initial={{ opacity: 0, y: 20 }}
@@ -101,6 +112,14 @@ const Hero = () => {
                            className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
                         >
                            Contact me
+                        </Button>
+                     </Link>
+                     <Link href="#projects">
+                        <Button
+                           variant="ghost"
+                           className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+                        >
+                           View projects
                         </Button>
                      </Link>
                   </div>
@@ -121,7 +140,7 @@ const Hero = () => {
                   <Image
                      src={hero}
                      alt="Coding animation"
-                     className="rounded-full w-[450px] h-auto relative z-0"
+                     className="rounded-full w-112.5 h-auto relative z-0"
                      width={1321}
                      height={1321}
                      priority

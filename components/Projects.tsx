@@ -8,7 +8,7 @@ import { projects } from '@/data/projects';
 const Projects = () => {
    return (
       <section id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
-         <SectionHeading>Projects</SectionHeading>
+         <SectionHeading>Discover what I've created</SectionHeading>
          <div className="flex flex-col gap-6">
             {
                /* Map through the projects array to render ProjectCard components */

@@ -266,10 +266,10 @@ const Skills = () => {
    };
 
    return (
-      <section id="skills" className="scroll-mt-30 mt-12 lg:mt-20">
+      <section id="skills" className="container">
          <div className="mx-auto">
             {/* Heading */}
-            <SectionHeading>Skills</SectionHeading>
+            <SectionHeading className='text-center pb-4'>Skills</SectionHeading>
 
             {/* Pill Tabs */}
             <motion.div

@@ -13,12 +13,12 @@ export default function Home() {
       <div className="w-11/12 max-w-7xl mx-auto">
          <div>
             <Hero />
-            <AboutMe />
-            <Education />
-            <Experience />
-            {/* <BentoCardComponent/> */}
             <ExpandableCard />
             <Skills />
+            <Experience />
+            <AboutMe />
+            <Education />
+            {/* <BentoCardComponent/> */}
             {/* <Projects /> */}
             <ContactSection />
          </div>

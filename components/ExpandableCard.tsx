@@ -17,6 +17,7 @@ import TechStackGrid from './TechStackGrid';
 import Link from 'next/link';
 import SectionHeading from './SectionHeading';
 import { cn } from '@/lib/utils';
+import SectionTitle from './SectionTitle';
 
 export function ExpandableCard() {
    const [active, setActive] = useState<
@@ -47,8 +48,16 @@ export function ExpandableCard() {
    );
 
    return (
-      <div id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
-         <SectionHeading>Projects</SectionHeading>
+      <div id="projects" className="container">
+         <SectionHeading className="text-center pb-4">Projects</SectionHeading>
+         <SectionTitle className="tracking-tight text-center py-4">
+            Discover what I've created
+         </SectionTitle>
+         <p className="text-center text-base-content/70 max-w-xl mx-auto mb-12">
+            Each piece reflects my passion for innovation and commitment to
+            delivering high-quality results. Feel free to explore and get
+            inspired!
+         </p>
 
          <AnimatePresence>
             {active && typeof active === 'object' && (
@@ -91,7 +100,7 @@ export function ExpandableCard() {
                   <motion.div
                      layoutId={`card-${active.title}-${id}`}
                      ref={ref}
-                     className="w-full max-w-[500px] h-full md:h-fit flex flex-col bg-[rgb(0,29,46)] dark:bg-[rgb(227,244,255)] sm:rounded-3xl overflow-hidden overflow-y-auto"
+                     className="w-full max-w-125 h-full md:h-fit flex flex-col bg-[rgb(0,29,46)] dark:bg-[rgb(227,244,255)] sm:rounded-3xl overflow-hidden overflow-y-auto"
                   >
                      <motion.div layoutId={`image-${active.title}-${id}`}>
                         <Image
@@ -109,7 +118,7 @@ export function ExpandableCard() {
                               <div className="flex items-center justify-between">
                                  <motion.h2
                                     layoutId={`title-${active.title}-${id}`}
-                                    className="text-2xl font-semibold"
+                                    className="text-2xl font-semibold font-mono"
                                  >
                                     {active.title}
                                  </motion.h2>
@@ -209,7 +218,7 @@ export function ExpandableCard() {
                   </div>
                   <Card className="border border-primary/20 bg-primary/5 rounded-t-none relative z-0">
                      <CardHeader>
-                        <CardTitle className="text-white dark:text-gray-800 text-lg">
+                        <CardTitle className="text-white font-mono dark:text-gray-800 text-lg">
                            {card.title}
                         </CardTitle>
                         <CardDescription className="flex text-white dark:text-gray-800 items-center gap-2">

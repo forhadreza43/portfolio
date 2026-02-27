@@ -3,9 +3,11 @@ import SectionHeading from './SectionHeading';
 
 const Experience = () => {
    return (
-      <section id="experience" className="scroll-mt-30 mt-12 lg:mt-20">
-         <SectionHeading>Work Experience</SectionHeading>
-         <ExperienceTimeline/>
+      <section id="experience" className="container">
+         <SectionHeading className="py-4 md:pb-6 md:text-center">
+            Work Experience
+         </SectionHeading>
+         <ExperienceTimeline />
       </section>
    );
 };

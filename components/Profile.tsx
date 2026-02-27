@@ -11,7 +11,7 @@ export default function Profile({ name = '' }: { name: string }) {
             height={100}
             className="rounded-full w-7 md:w-8 lg:w-9 h-auto object-cover relative z-0"
          />
-         <p className="text-md md:text-lg lg:text-2xl font-bold text-nowrap">
+         <p className="text-md md:text-xl lg:text-2xl font-light text-nowrap font-caveat">
             {name}
          </p>
       </div>

@@ -36,7 +36,7 @@ const events: TimelineEvent[] = [
       side: 'left',
    },
    {
-      passingYear: '2018',
+      passingYear: '2017',
       nameOfDegree: 'Higher Secondary School Certificate (H.S.C) : Science',
       institution: 'B.M Union School and College',
       description:
@@ -81,7 +81,7 @@ const TimelineCard = ({
             isActive ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-2'
          } ${isLeft ? 'md:text-right' : 'md:text-left'}`}
       >
-         <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
+         <h3 className="font-mono font-semibold text-gray-200 dark:text-gray-800 mb-2">
             {event.nameOfDegree}
          </h3>
 

@@ -3,8 +3,10 @@ import EducationTimeline from './EducationTimeline';
 
 export const Education = () => {
    return (
-      <section className="scroll-mt-30 mt-12 lg:mt-20" id="education">
-         <SectionHeading>Education</SectionHeading>
+      <section className="container" id="education">
+         <SectionHeading className="py-4 md:pb-6 md:text-center">
+            Education
+         </SectionHeading>
          <EducationTimeline />
       </section>
    );

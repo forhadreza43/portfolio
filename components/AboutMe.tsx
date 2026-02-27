@@ -1,37 +1,77 @@
 'use client';
-import React from 'react';
+import hero from '@/assets/hero.png';
+import Image from 'next/image';
 import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
+import SectionTitle from './SectionTitle';
+import Link from 'next/link';
+import { Button } from './ui/button';
 
 const AboutMe = () => {
    return (
       <section
          id="about"
-         className="scroll-mt-30 mx-auto mt-12 lg:mt-20 relative"
+         className="container relative flex flex-col md:flex-row items-center gap-10 lg:gap-20"
       >
-         <SectionHeading>About me</SectionHeading>
+         {/* <SectionHeading>About me</SectionHeading> */}
 
+         {/* rounded-lg shadow-md bg-primary/5 border border-primary/20 */}
          <motion.div
-            className="p-6 rounded-lg shadow-md bg-primary/5 border border-primary/20 relative"
+            className="flex-1 relative"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
          >
+            <SectionHeading>About</SectionHeading>
+            <SectionTitle className="pt-3 pb-4">
+               Developer who loves to build stuff
+            </SectionTitle>
             <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
-               I&apos;m a passionate MERN Stack developer with a strong
-               foundation in building dynamic, scalable, and user-focused web
-               applications. Proficient in React, Next.js, MongoDB, Express.js, and
-               Node.js, Mongoose, Prisma, PostgreSQL, I thrive on transforming ideas into seamless digital
-               experiences. With a keen eye for detail and a commitment to
-               writing clean, efficient code, I specialize in crafting
-               responsive front-end interfaces and robust back-end systems. My
-               goal is to create innovative solutions that solve real-world
-               problems while staying updated with the latest industry trends.
-               When I&apos;m not coding, you can find me exploring new
-               technologies, contributing to open-source projects, or sharing
-               knowledge with the developer community.
+               Hello! I&apos;m Forhad Reza, a passionate web developer who
+               thrives on creating innovative solutions that tackle complex user
+               challenges.
             </p>
+            <p className="py-4 text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
+               My attention to detail allows me to enhance every interaction,
+               ensuring it not only boosts productivity but also elevates user
+               satisfaction.
+            </p>
+
+            <div className="flex gap-3 md:gap-4 mt-4">
+               <Link href="#contact">
+                  <Button
+                     variant="outline"
+                     className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+                  >
+                     Contact me
+                  </Button>
+               </Link>
+               <Link href="#projects">
+                  <Button
+                     variant="ghost"
+                     className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
+                  >
+                     View projects
+                  </Button>
+               </Link>
+            </div>
+         </motion.div>
+         <motion.div
+            className="flex flex-1 relative z-0 justify-center lg:justify-end w-full lg:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+         >
+            <Image
+               src={hero}
+               alt="Coding animation"
+               className="rounded-full w-112.5 h-auto relative z-0"
+               width={1321}
+               height={1321}
+               priority
+               placeholder="blur"
+            />
          </motion.div>
       </section>
    );

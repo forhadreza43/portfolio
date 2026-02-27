@@ -39,12 +39,12 @@ const events: TimelineEvent[] = [
 const TimelineCard = ({ event }: { event: TimelineEvent }) => {
    const content = (
       <div className={`transition-all duration-500 opacity-100 translate-y-0`}>
-         <h3 className="text-base md:text-lg font-bold text-foreground leading-tight">
+         <h3 className="text-base md:text-lg font-bold font-mono text-foreground leading-tight">
             <Link href={'https://nexttechltd.com'} target="_blank">
                {event.company}
             </Link>
          </h3>
-         <p className="text-primary mt-2 font-semibold">
+         <p className="text-primary text-sm mt-2 font-semibold font-mono">
             {event.role} | {event.type && `${event.type}`}
          </p>
          <p className="text-sm text-foreground/80 mb-1">
@@ -60,7 +60,9 @@ const TimelineCard = ({ event }: { event: TimelineEvent }) => {
                      <span className="shrink-0 text-gray-400 mt-1 md:mt-0.75">
                         <CircleCheck className="w-4 h-4" />
                      </span>
-                     <p className="text-gray-400 leading-relaxed">{resp}</p>
+                     <p className="text-gray-400 dark:text-gray-600 leading-relaxed">
+                        {resp}
+                     </p>
                   </div>
                ))}
             </div>
