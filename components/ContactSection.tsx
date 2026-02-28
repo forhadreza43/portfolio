@@ -60,7 +60,7 @@ export default function ContactSection() {
                viewport={{ once: true }}
             >
                <div>
-                  <SectionHeading>Contact Me</SectionHeading>
+                  <SectionHeading className='text-center md:text-left'>Contact Me</SectionHeading>
                   <SectionTitle className="pt-3 pb-4">Let's talk!</SectionTitle>
                   <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
                      Feel free to reach out! I'm here to help and will respond

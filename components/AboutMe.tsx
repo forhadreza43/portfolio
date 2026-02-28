@@ -23,7 +23,7 @@ const AboutMe = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
          >
-            <SectionHeading>About</SectionHeading>
+            <SectionHeading className='text-center md:text-left'>About</SectionHeading>
             <SectionTitle className="pt-3 pb-4">
                Developer who loves to build stuff
             </SectionTitle>
