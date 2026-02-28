@@ -39,7 +39,7 @@ const events: TimelineEvent[] = [
 const TimelineCard = ({ event }: { event: TimelineEvent }) => {
    const content = (
       <div className={`transition-all duration-500 opacity-100 translate-y-0`}>
-         <h3 className="text-base md:text-lg font-bold font-mono text-foreground leading-tight">
+         <h3 className="text-base md:text-lg font-semibold text-foreground leading-tight">
             <Link href={'https://nexttechltd.com'} target="_blank">
                {event.company}
             </Link>

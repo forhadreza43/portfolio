@@ -52,22 +52,22 @@ const Hero = () => {
 
                   {/* new content  */}
                   <motion.p
-                     className="text-2xl md:text-3xl font-light  font-caveat"
+                     className="text-xl md:text-2xl text-primary "
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.4, duration: 0.6 }}
                   >
-                     Forhad <span className="text-primary">Reza</span>
+                     Forhad Reza
                   </motion.p>
 
-                  <SectionTitle className="text-xl md:text-3xl lg:text-4xl font-semibold">
+                  <SectionTitle className="text-xl md:text-2xl lg:text-3xl font-semibold">
                      Your go-to engineer for React.js & Next.js projects
                   </SectionTitle>
 
                   {/* old content  */}
 
                   {/* <motion.h2
-                     className="text-base sm:text-lg md:text-xl font-mono font-medium text-base-content/80"
+                     className="text-base sm:text-lg md:text-xl  font-medium text-base-content/80"
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.4, duration: 0.6 }}
@@ -75,7 +75,7 @@ const Hero = () => {
                      Web Developer
                   </motion.h2> */}
 
-                  {/* <h2 className="text-base sm:text-lg md:text-xl font-mono text-primary font-medium text-base-content/80">
+                  {/* <h2 className="text-base sm:text-lg md:text-xl text-primary font-medium text-base-content/80">
                      <Typewriter
                         words={words}
                         loop={100}
@@ -104,7 +104,7 @@ const Hero = () => {
                   >
                      <SocialButton />
                   </motion.div>
-                  <div className="flex gap-3 md:gap-4 mt-4">
+                  <div className="flex gap-3 md:gap-4 mt-4 items-center">
                      <ResumeDownload />
                      <Link href="#contact">
                         <Button
@@ -114,13 +114,8 @@ const Hero = () => {
                            Contact me
                         </Button>
                      </Link>
-                     <Link href="#projects">
-                        <Button
-                           variant="ghost"
-                           className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
-                        >
-                           View projects
-                        </Button>
+                     <Link href="#projects" className='hover:text-primary transition-colors duration-300'>
+                        View projects
                      </Link>
                   </div>
                </motion.div>

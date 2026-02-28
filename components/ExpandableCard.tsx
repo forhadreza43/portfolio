@@ -118,7 +118,7 @@ export function ExpandableCard() {
                               <div className="flex items-center justify-between">
                                  <motion.h2
                                     layoutId={`title-${active.title}-${id}`}
-                                    className="text-2xl font-semibold font-mono"
+                                    className="text-2xl font-semibold "
                                  >
                                     {active.title}
                                  </motion.h2>
@@ -218,7 +218,7 @@ export function ExpandableCard() {
                   </div>
                   <Card className="border border-primary/20 bg-primary/5 rounded-t-none relative z-0">
                      <CardHeader>
-                        <CardTitle className="text-white font-mono dark:text-gray-800 text-lg">
+                        <CardTitle className="text-white dark:text-gray-800 text-lg">
                            {card.title}
                         </CardTitle>
                         <CardDescription className="flex text-white dark:text-gray-800 items-center gap-2">

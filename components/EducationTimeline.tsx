@@ -81,7 +81,7 @@ const TimelineCard = ({
             isActive ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-2'
          } ${isLeft ? 'md:text-right' : 'md:text-left'}`}
       >
-         <h3 className="font-mono font-semibold text-gray-200 dark:text-gray-800 mb-2">
+         <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
             {event.nameOfDegree}
          </h3>
 

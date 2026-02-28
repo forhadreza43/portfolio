@@ -38,7 +38,7 @@ const AboutMe = () => {
                satisfaction.
             </p>
 
-            <div className="flex gap-3 md:gap-4 mt-4">
+            <div className="flex gap-3 md:gap-4 mt-4 items-center">
                <Link href="#contact">
                   <Button
                      variant="outline"
@@ -47,13 +47,11 @@ const AboutMe = () => {
                      Contact me
                   </Button>
                </Link>
-               <Link href="#projects">
-                  <Button
-                     variant="ghost"
-                     className="rounded-full border-primary/50 hover:bg-primary hover:border-primary dark:hover:bg-primary/80 dark:hover:border-primary/80 dark:hover:text-white"
-                  >
-                     View projects
-                  </Button>
+               <Link
+                  href="#projects"
+                  className="hover:text-primary transition-colors duration-300"
+               >
+                  View projects
                </Link>
             </div>
          </motion.div>
