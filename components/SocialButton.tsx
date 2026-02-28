@@ -21,21 +21,21 @@ const social: Social = [
       icon: <FaLinkedin size={16} className="text-base-content" />,
       link: 'https://www.linkedin.com/in/rezaforhad',
    },
-   {
-      name: 'Email',
-      icon: <HiEnvelope size={16} className="text-base-content" />,
-      link: `mailto:forhad.bimt@gmail.com`,
-   },
+   // {
+   //    name: 'Email',
+   //    icon: <HiEnvelope size={16} className="text-base-content" />,
+   //    link: `mailto:forhad.bimt@gmail.com`,
+   // },
    {
       name: 'Facebook',
       icon: <FaFacebook size={16} className="text-base-content" />,
       link: 'https://www.facebook.com/forhadreza000',
    },
-   {
-      name: 'X',
-      icon: <FaXTwitter size={16} className="text-base-content" />,
-      link: 'https://twitter.com/forhadreza111',
-   },
+   // {
+   //    name: 'X',
+   //    icon: <FaXTwitter size={16} className="text-base-content" />,
+   //    link: 'https://twitter.com/forhadreza111',
+   // },
 ];
 
 export default function SocialButton() {

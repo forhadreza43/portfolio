@@ -49,7 +49,7 @@ const AboutMe = () => {
                </Link>
                <Link
                   href="#projects"
-                  className="hover:text-primary transition-colors duration-300"
+                  className="hover:text-primary hover:underline underline-offset-3 transition-all duration-300"
                >
                   View projects
                </Link>
