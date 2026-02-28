@@ -10,7 +10,7 @@ import { motion } from 'motion/react';
 import ResumeDownload from './ResumeDownload';
 import Link from 'next/link';
 import Image from 'next/image';
-import hero from '@/assets/hero.png';
+import hero from '@/assets/2.5.png';
 import SocialButton from './SocialButton';
 import SectionTitle from './SectionTitle';
 
@@ -60,7 +60,7 @@ const Hero = () => {
                      Forhad Reza
                   </motion.p>
 
-                  <SectionTitle className="text-xl md:text-2xl lg:text-3xl font-semibold">
+                  <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold">
                      Your go-to engineer for React.js & Next.js projects
                   </SectionTitle>
 
@@ -114,7 +114,10 @@ const Hero = () => {
                            Contact me
                         </Button>
                      </Link>
-                     <Link href="#projects" className='hover:text-primary hover:underline underline-offset-3 transition-all duration-300'>
+                     <Link
+                        href="#projects"
+                        className="hover:text-primary hover:underline underline-offset-3 transition-all duration-300"
+                     >
                         View projects
                      </Link>
                   </div>
@@ -136,8 +139,8 @@ const Hero = () => {
                      src={hero}
                      alt="Coding animation"
                      className="rounded-full w-112.5 h-auto relative z-0"
-                     width={1321}
-                     height={1321}
+                     width={713}
+                     height={713}
                      priority
                      placeholder="blur"
                   />

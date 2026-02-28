@@ -1,5 +1,5 @@
 'use client';
-import person1 from '@/assets/2.png';
+import person1 from '@/assets/1.5.png';
 import Image from 'next/image';
 import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
@@ -65,8 +65,8 @@ const AboutMe = () => {
                src={person1}
                alt="Profile image"
                className="rounded-lg w-112.5 h-auto relative z-0"
-               width={3072}
-               height={3072}
+               width={881}
+               height={881}
                priority
                placeholder="blur"
             />
