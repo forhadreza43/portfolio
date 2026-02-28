@@ -4,10 +4,14 @@ import React from 'react';
 import SectionHeading from './SectionHeading';
 import ProjectCard from './ProjectCard';
 import { projects } from '@/data/projects';
+import SectionTitle from './SectionTitle';
 
 const Projects = () => {
    return (
       <section id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
+         {/* <SectionTitle className="text-center py-4 md:pb-6">
+            Projects
+         </SectionTitle> */}
          <SectionHeading>Discover what I've created</SectionHeading>
          <div className="flex flex-col gap-6">
             {

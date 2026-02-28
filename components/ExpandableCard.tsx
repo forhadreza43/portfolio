@@ -49,8 +49,10 @@ export function ExpandableCard() {
 
    return (
       <div id="projects" className="container">
-         <SectionHeading className="text-center pb-4">Projects</SectionHeading>
-         <SectionTitle className="tracking-tight text-center py-4">
+         <SectionHeading className="text-center py-3">
+            Projects
+         </SectionHeading>
+         <SectionTitle className="tracking-tight text-center pb-4">
             Discover what I've created
          </SectionTitle>
          <p className="text-center text-base-content/70 max-w-xl mx-auto mb-12">
