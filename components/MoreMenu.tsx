@@ -16,16 +16,15 @@ const MoreMenu = () => {
    return (
       <Menubar>
          <MenubarMenu>
-            <MenubarTrigger className="group hover:bg-transparent hover:text-primary">
-               <Button
-                  variant="ghost"
-                  className="hover:bg-transparent hover:text-primary"
+            <MenubarTrigger className="group bg-transparent hover:bg-transparent hover:text-primary">
+               <span
+                  className="flex flex-nowrap items-center hover:text-primary"
                >
                   More
                   <ChevronDown
                      className="ml-2 h-4 w-4 transition-transform duration-300 group-data-[state=open]:rotate-180"
                   />
-               </Button>
+               </span>
             </MenubarTrigger>
             <MenubarContent>
                {moreNavItems.map((item, idx) => (
