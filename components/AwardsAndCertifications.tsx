@@ -5,7 +5,7 @@ const AwardsAndCertifications = () => {
    return (
       <section
          className="container flex flex-col gap-10 md:flex-row-reverse md:justify-between"
-         id="education"
+         id="awards-and-certifications"
       >
          <div className="md:flex-1">
             <SectionHeading className="py-4 md:pb-6 text-center md:text-left">

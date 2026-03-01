@@ -13,6 +13,8 @@ import { Menu } from 'lucide-react';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import ResumeDownload from './ResumeDownload';
 import Profile from './Profile';
+import MoreMenu from './MoreMenu';
+import { desktopNavItems, mobileNavItems } from '@/data/navItem';
 type NavItem = {
    name: string;
    href: string;
@@ -118,7 +120,7 @@ export const FloatingNav = ({
                      {/* Desktop Nav */}
                      <div className="hidden md:flex justify-center flex-1">
                         <nav className="flex items-center gap-1">
-                           {navItems.map((navItem, idx) => (
+                           {desktopNavItems.map((navItem, idx) => (
                               <motion.div
                                  key={idx}
                                  // variants={itemVariants}
@@ -140,6 +142,9 @@ export const FloatingNav = ({
                                  </Link>
                               </motion.div>
                            ))}
+                           <div>
+                              <MoreMenu />
+                           </div>
                         </nav>
                      </div>
 
@@ -190,7 +195,7 @@ export const FloatingNav = ({
                                  </div>
                               </div>
                               <div className="flex-1 px-6 py-8 space-y-4">
-                                 {navItems.map((navItem, idx) => (
+                                 {mobileNavItems.map((navItem, idx) => (
                                     <Link
                                        key={idx}
                                        href={navItem.href}
