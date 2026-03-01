@@ -15,14 +15,14 @@ interface TimelineEvent {
 
 const events: TimelineEvent[] = [
    {
-      joiningDate: 'Nov 2025',
+      joiningDate: 'Aug 2025',
       leavingDate: 'Present',
-      role: 'Full Stack Developer | Intern',
+      role: 'Frontend Developer',
       type: 'Full-time',
       company: 'NextTech Limited',
       location: '744/1 (3rd Floor), Metro Pillar-296, Shewrapara,  Dhaka 1216',
       responsibilities: [
-         'Collaborate with cross-functional teams to design, develop, and maintain web applications using modern technologies.',
+         'Collaborate with cross-functional teams to design, develop, and maintain web applications using React, Next.js, and TypeScript.',
          'Implement responsive user interfaces and ensure seamless user experiences across devices.',
          'Participate in code reviews, debugging, and performance optimization to deliver high-quality software solutions.',
       ],
