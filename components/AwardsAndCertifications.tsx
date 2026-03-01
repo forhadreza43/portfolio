@@ -13,7 +13,7 @@ const AwardsAndCertifications = () => {
             </SectionHeading>
             <div className="space-y-6">
                <div className="flex items-start gap-2">
-                  <Award size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Award size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         Dean's Award for Outstanding Academic Performance.
@@ -24,7 +24,7 @@ const AwardsAndCertifications = () => {
                   </div>
                </div>
                <div className="flex items-start gap-2">
-                  <Award size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Award size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         BLACKBELT {'<Web Developer />'}
@@ -42,7 +42,7 @@ const AwardsAndCertifications = () => {
             </SectionHeading>
             <div className="space-y-6">
                <div className="flex items-start gap-2">
-                  <Library size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Library size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         Complete Web Development
@@ -53,7 +53,7 @@ const AwardsAndCertifications = () => {
                   </div>
                </div>
                <div className="flex items-start gap-2">
-                  <Library size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Library size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         Reactive Accelerator
@@ -64,7 +64,7 @@ const AwardsAndCertifications = () => {
                   </div>
                </div>
                <div className="flex items-start gap-2">
-                  <Library size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Library size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         CS Fundamentals
@@ -75,7 +75,7 @@ const AwardsAndCertifications = () => {
                   </div>
                </div>
                <div className="flex items-start gap-2">
-                  <Library size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Library size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         SQL Advance
@@ -86,7 +86,7 @@ const AwardsAndCertifications = () => {
                   </div>
                </div>
                <div className="flex items-start gap-2">
-                  <Library size={24} className="mt-0.5 -ml-1 text-primary" />
+                  <Library size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
                         Next.js App Router
