@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 // import Projects from "@/components/Projects";
 import Skills from '@/components/Skills';
 import Timeline from '@/components/EducationTimeline';
+import AwardsAndCertifications from '@/components/AwardsAndCertifications';
 
 export default function Home() {
    return (
@@ -20,6 +21,7 @@ export default function Home() {
             <Education />
             {/* <BentoCardComponent/> */}
             {/* <Projects /> */}
+            <AwardsAndCertifications/>
             <ContactSection />
          </div>
       </div>

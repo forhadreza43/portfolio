@@ -1,4 +1,4 @@
-import { CircleCheck, CodeXml } from 'lucide-react';
+import { Building2, CircleCheck, CodeXml } from 'lucide-react';
 import Link from 'next/link';
 import { projects } from '../data/projects';
 
@@ -90,6 +90,7 @@ const TimelineCard = ({ event }: { event: TimelineEvent }) => {
             `}
       >
          <CodeXml size={20} />
+         {/* <Building2 size={20}  /> */}
       </div>
    );
 
