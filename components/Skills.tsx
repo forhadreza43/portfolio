@@ -17,7 +17,6 @@ import {
    // SiHtml5,
    // SiCss3,
    SiCanva,
-   SiAdobephotoshop,
    SiNotion,
    SiNetlify,
    SiVercel,
@@ -30,13 +29,15 @@ import {
    SiPrisma,
    SiAxios,
    SiVite,
-   SiAdobeillustrator,
    SiBun,
    SiPnpm,
    SiNpm,
+   SiShadcnui,
+   SiBetterauth 
 } from 'react-icons/si';
+import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandNextjs,  } from "react-icons/tb";
 import { BiLogoTypescript, BiLogoPostgresql } from 'react-icons/bi';
-import { RiJavascriptFill } from 'react-icons/ri';
+import { RiJavascriptFill, RiReactjsLine } from 'react-icons/ri';
 import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
 import PillTabs, { TabItemType } from './shsfui/switch/pill-tabs';
@@ -53,13 +54,13 @@ const skillsData = {
    Frontend: [
       {
          name: 'Next.js',
-         icon: <SiNextdotjs className="text-base-content dark:text-gray-800" />,
+         icon: <TbBrandNextjs className="text-base-content dark:text-gray-800" />,
          borderColor: 'border-base-content',
          shadowColor: 'hover:shadow-base-content/40',
       },
       {
          name: 'React',
-         icon: <FaReact className="text-cyan-400" />,
+         icon: <RiReactjsLine className="text-cyan-400" />,
          borderColor: 'border-cyan-400',
          shadowColor: 'hover:shadow-cyan-400/40',
       },
@@ -80,6 +81,12 @@ const skillsData = {
          icon: <SiTailwindcss className="text-cyan-300" />,
          borderColor: 'border-cyan-300',
          shadowColor: 'hover:shadow-cyan-300/40',
+      },
+      {
+         name: 'Shadcn',
+         icon: <SiShadcnui  className="" />,
+         borderColor: 'border-red-500',
+         shadowColor: 'hover:shadow-red-500/40',
       },
       {
          name: 'Tanstack Query',
@@ -137,9 +144,15 @@ const skillsData = {
          borderColor: 'border-blue-400',
          shadowColor: 'hover:shadow-blue-400/40',
       },
+      // {
+      //    name: 'Firebase',
+      //    icon: <SiFirebase className="text-yellow-500" />,
+      //    borderColor: 'border-yellow-500',
+      //    shadowColor: 'hover:shadow-yellow-500/40',
+      // },
       {
-         name: 'Firebase',
-         icon: <SiFirebase className="text-yellow-500" />,
+         name: 'BetterAuth',
+         icon: <SiBetterauth  className="" />,
          borderColor: 'border-yellow-500',
          shadowColor: 'hover:shadow-yellow-500/40',
       },
@@ -227,13 +240,13 @@ const skillsData = {
       },
       {
          name: 'Photoshop',
-         icon: <SiAdobephotoshop className="text-blue-300" />,
+         icon: <TbBrandAdobePhotoshop className="text-blue-300" />,
          borderColor: 'border-blue-300',
          shadowColor: 'hover:shadow-blue-300/40',
       },
       {
          name: 'Illustrator',
-         icon: <SiAdobeillustrator className="text-orange-600" />,
+         icon: <TbBrandAdobeIllustrator className="text-orange-600" />,
          borderColor: 'border-red-500',
          shadowColor: 'hover:shadow-red-500/40',
       },
