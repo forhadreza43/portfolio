@@ -2,28 +2,20 @@
 
 import React, { JSX } from 'react';
 import {
-   FaReact,
    FaGitAlt,
    FaGithub,
    FaFigma,
    FaNodeJs,
-   FaRegImage,
-   FaBolt,
 } from 'react-icons/fa';
 import {
    SiTailwindcss,
    SiExpress,
    SiMongodb,
-   // SiHtml5,
-   // SiCss3,
    SiCanva,
    SiNotion,
    SiNetlify,
    SiVercel,
    SiReactquery,
-   SiFirebase,
-   SiJsonwebtokens,
-   SiNextdotjs,
    SiMysql,
    SiMongoose,
    SiPrisma,

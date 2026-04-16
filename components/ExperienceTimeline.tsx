@@ -1,6 +1,5 @@
-import { Building2, CircleCheck, CodeXml } from 'lucide-react';
+import { CircleCheck, CodeXml } from 'lucide-react';
 import Link from 'next/link';
-import { projects } from '../data/projects';
 
 interface TimelineEvent {
    joiningDate: string;
@@ -9,7 +8,7 @@ interface TimelineEvent {
    type?: string;
    company: string;
    location: string;
-   responsibilities?: {role?:string, description: string}[];
+   responsibilities?: { role?: string; description: string }[];
    projects?: { name: string; link: string }[];
 }
 
@@ -21,17 +20,28 @@ const events: TimelineEvent[] = [
       type: 'Full-time',
       company: 'NextTech Limited',
       location: '744/1 (3rd Floor), Metro Pillar-296, Shewrapara,  Dhaka 1216',
-      responsibilities:[
-         {role: 'Cross-Functional Leadership', description:'Lead a multi-disciplinary team including Backend Developers, UX Designers, and QA Testers, overseeing the full product development lifecycle.'},
-         {role: 'Technical Architecture', description:'Drive the frontend strategy using Next.js and TypeScript, ensuring seamless integration between UI/UX designs and backend APIs.' },
-         {role:'Project Oversight', description:'Manage sprints and workflows to ensure high-quality delivery, from initial wireframing and user testing to final deployment.' },
-         {role: 'Performance & Quality', description:'Conduct code reviews and establish testing standards to maintain high performance, accessibility, and code reliability.'}
-      ]
-      // responsibilities: [
-      //    'Collaborate with cross-functional teams to design, develop, and maintain web applications using React, Next.js, and TypeScript.',
-      //    'Implement responsive user interfaces and ensure seamless user experiences across devices.',
-      //    'Participate in code reviews, debugging, and performance optimization to deliver high-quality software solutions.',
-      // ],
+      responsibilities: [
+         {
+            role: 'Cross-Functional Leadership',
+            description:
+               'Lead a multi-disciplinary team including Backend Developers, UX Designers, and QA Testers, overseeing the full product development lifecycle.',
+         },
+         {
+            role: 'Technical Architecture',
+            description:
+               'Drive the frontend strategy using Next.js and TypeScript, ensuring seamless integration between UI/UX designs and backend APIs.',
+         },
+         {
+            role: 'Project Oversight',
+            description:
+               'Manage sprints and workflows to ensure high-quality delivery, from initial wireframing and user testing to final deployment.',
+         },
+         {
+            role: 'Performance & Quality',
+            description:
+               'Conduct code reviews and establish testing standards to maintain high performance, accessibility, and code reliability.',
+         },
+      ],
       // projects: [
       //    { name: 'NextTech Website', link: '#' },
       //    {
@@ -48,10 +58,22 @@ const events: TimelineEvent[] = [
       company: 'ZenSoft Lab',
       location: 'Level 4, 128/3, Dhaka',
       responsibilities: [
-  { role: 'Full-Stack Implementation', description: 'Developed web applications using the MERN stack, focusing on building responsive React components and scalable Node.js/Express services.' },
-  { role: 'Database & API Design', description: 'Assisted in designing MongoDB schemas and developing RESTful APIs to handle complex data structures.' },
-  { role: 'Agile Collaboration', description: 'Worked within an agile team to ship features, debug issues, and optimize application performance across the stack.' }
-]
+         {
+            role: 'Full-Stack Implementation',
+            description:
+               'Developed web applications using the MERN stack, focusing on building responsive React components and scalable Node.js/Express services.',
+         },
+         {
+            role: 'Database & API Design',
+            description:
+               'Assisted in designing MongoDB schemas and developing RESTful APIs to handle complex data structures.',
+         },
+         {
+            role: 'Agile Collaboration',
+            description:
+               'Worked within an agile team to ship features, debug issues, and optimize application performance across the stack.',
+         },
+      ],
       // projects: [
       //    { name: 'NextTech Website', link: '#' },
       //    {
@@ -87,7 +109,10 @@ const TimelineCard = ({ event }: { event: TimelineEvent }) => {
                         <CircleCheck className="w-4 h-4" />
                      </span>
                      <p className="text-gray-400 dark:text-gray-600 leading-relaxed">
-                        {resp.role && <span className='font-bold'>{resp.role}:</span> } {resp.description}
+                        {resp.role && (
+                           <span className="font-bold">{resp.role}:</span>
+                        )}{' '}
+                        {resp.description}
                      </p>
                   </div>
                ))}
