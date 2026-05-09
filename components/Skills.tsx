@@ -6,6 +6,8 @@ import {
    FaGithub,
    FaFigma,
    FaNodeJs,
+   FaDocker,
+   FaReact,
 } from 'react-icons/fa';
 import {
    SiTailwindcss,
@@ -25,15 +27,38 @@ import {
    SiPnpm,
    SiNpm,
    SiShadcnui,
-   SiBetterauth 
+   SiBetterauth,
+   SiJsonwebtokens,
+   SiClaude,
+   SiOpenai,
+   SiRedux,
 } from 'react-icons/si';
-import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandNextjs,  } from "react-icons/tb";
+import {
+   TbBrandAdobeIllustrator,
+   TbBrandAdobePhotoshop,
+   TbBrandNextjs,
+   TbBrandRedux,
+} from 'react-icons/tb';
 import { BiLogoTypescript, BiLogoPostgresql } from 'react-icons/bi';
-import { RiJavascriptFill, RiReactjsLine } from 'react-icons/ri';
+import {
+   RiJavascriptFill,
+   RiReactjsLine,
+   RiGeminiFill,
+   RiNextjsFill,
+} from 'react-icons/ri';
+import { VscVscode } from 'react-icons/vsc';
 import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
 import PillTabs, { TabItemType } from './shsfui/switch/pill-tabs';
 import SkillCard from './SkillCard';
+// import CursorAiIcon from '@/data/icons/CursorAiIcon';
+import {
+   CursorAi,
+   GoogleAntigravity,
+   Windsurf,
+   Replit,
+   ReactQuery,
+} from '@boxicons/react';
 
 type SkillData = {
    name: string;
@@ -46,15 +71,23 @@ const skillsData = {
    Frontend: [
       {
          name: 'Next.js',
-         icon: <TbBrandNextjs className="text-base-content dark:text-gray-800" />,
+         icon: (
+            <TbBrandNextjs className="text-base-content dark:text-gray-800" />
+         ),
          borderColor: 'border-base-content',
          shadowColor: 'hover:shadow-base-content/40',
       },
       {
          name: 'React',
-         icon: <RiReactjsLine className="text-cyan-400" />,
+         icon: <FaReact className="text-cyan-400" />,
          borderColor: 'border-cyan-400',
          shadowColor: 'hover:shadow-cyan-400/40',
+      },
+      {
+         name: 'Redux',
+         icon: <SiRedux className="text-purple-400" />,
+         borderColor: 'border-purple-400',
+         shadowColor: 'hover:shadow-purple-400/40',
       },
       {
          name: 'TypeScript',
@@ -76,19 +109,25 @@ const skillsData = {
       },
       {
          name: 'Shadcn',
-         icon: <SiShadcnui  className="" />,
+         icon: <SiShadcnui className="" />,
          borderColor: 'border-red-500',
          shadowColor: 'hover:shadow-red-500/40',
       },
       {
          name: 'Tanstack Query',
-         icon: <SiReactquery className="text-red-500" />,
+         icon: <ReactQuery className="text-red-500 w-14 h-14" />,
          borderColor: 'border-red-500',
          shadowColor: 'hover:shadow-red-500/40',
       },
       {
          name: 'Axios',
          icon: <SiAxios className="text-blue-500" />,
+         borderColor: 'border-blue-500',
+         shadowColor: 'hover:shadow-blue-500/40',
+      },
+      {
+         name: 'Docker',
+         icon: <FaDocker className="text-blue-500" />,
          borderColor: 'border-blue-500',
          shadowColor: 'hover:shadow-blue-500/40',
       },
@@ -144,12 +183,24 @@ const skillsData = {
       // },
       {
          name: 'BetterAuth',
-         icon: <SiBetterauth  className="" />,
+         icon: <SiBetterauth className="" />,
          borderColor: 'border-yellow-500',
          shadowColor: 'hover:shadow-yellow-500/40',
       },
    ],
    Tools: [
+      {
+         name: 'Vscode',
+         icon: <VscVscode className="text-blue-500" />,
+         borderColor: 'border-blue-500',
+         shadowColor: 'hover:shadow-blue-500/40',
+      },
+      {
+         name: 'Cursor',
+         icon: <CursorAi className="text-white dark:text-gray-800 w-14 h-14" />,
+         borderColor: 'border-white dark:border-gray-800',
+         shadowColor: 'hover:shadow-white dark:hover:shadow-gray-800/40',
+      },
       {
          name: 'Git',
          icon: <FaGitAlt className="text-orange-600" />,
@@ -162,18 +213,12 @@ const skillsData = {
          borderColor: 'border-base-content',
          shadowColor: 'hover:shadow-base-content/30',
       },
-      // {
-      //    name: 'JWT',
-      //    icon: <SiJsonwebtokens className="text-amber-500" />,
-      //    borderColor: 'border-amber-500',
-      //    shadowColor: 'hover:shadow-amber-500/40',
-      // },
-      // {
-      //    name: 'Atlas',
-      //    icon: <SiMongodb className="text-primary" />,
-      //    borderColor: 'border-primary',
-      //    shadowColor: 'hover:shadow-primary/40',
-      // },
+      {
+         name: 'JWT',
+         icon: <SiJsonwebtokens className="text-amber-500" />,
+         borderColor: 'border-amber-500',
+         shadowColor: 'hover:shadow-amber-500/40',
+      },
       {
          name: 'Netlify',
          icon: <SiNetlify className="text-green-400" />,
@@ -186,12 +231,6 @@ const skillsData = {
          borderColor: 'border-base-content',
          shadowColor: 'hover:shadow-base-content/30',
       },
-      // {
-      //    name: 'Surge',
-      //    icon: <FaBolt className="text-yellow-400" />,
-      //    borderColor: 'border-yellow-400',
-      //    shadowColor: 'hover:shadow-yellow-400/40',
-      // },
       {
          name: 'Vite',
          icon: <SiVite className="text-purple-600" />,
@@ -215,6 +254,45 @@ const skillsData = {
          icon: <SiNpm className="text-red-500" />,
          borderColor: 'border-red-500',
          shadowColor: 'hover:shadow-red-500/40',
+      },
+   ],
+   AI: [
+      {
+         name: 'Claude',
+         icon: <SiClaude className="text-orange-500" />,
+         borderColor: 'border-orange-500',
+         shadowColor: 'hover:shadow-orange-500/40',
+      },
+      {
+         name: 'ChatGPT',
+         icon: <SiOpenai className="text-white dark:text-gray-800" />,
+         borderColor: 'border-white dark:border-gray-800',
+         shadowColor: 'hover:shadow-white dark:hover:shadow-gray-800/40',
+      },
+      {
+         name: 'Gemini',
+         icon: <RiGeminiFill className="text-blue-500" />,
+         borderColor: 'border-blue-500',
+         shadowColor: 'hover:shadow-blue-500/40',
+      },
+
+      {
+         name: 'Windsurf',
+         icon: <Windsurf className="text-white dark:text-gray-800 w-14 h-14" />,
+         borderColor: 'border-white dark:border-gray-800',
+         shadowColor: 'hover:shadow-white dark:hover:shadow-gray-800/40',
+      },
+      {
+         name: 'Antigravity',
+         icon: <GoogleAntigravity className="text-blue-500 w-14 h-14" />,
+         borderColor: 'border-blue-500',
+         shadowColor: 'hover:shadow-blue-500/40',
+      },
+      {
+         name: 'Replit',
+         icon: <Replit className="text-orange-500 w-14 h-14" />,
+         borderColor: 'border-orange-500',
+         shadowColor: 'hover:shadow-orange-500/40',
       },
    ],
    Others: [
@@ -274,7 +352,7 @@ const Skills = () => {
       <section id="skills" className="container">
          <div className="mx-auto">
             {/* Heading */}
-            <SectionHeading className='text-center pb-4'>Skills</SectionHeading>
+            <SectionHeading className="text-center pb-4">Skills</SectionHeading>
 
             {/* Pill Tabs */}
             <motion.div
