@@ -108,7 +108,7 @@ export function ExpandableCard() {
                         <Image
                            width={1920}
                            height={1080}
-                           src={active.imageUrl}
+                           src={active.imageUrl[0]}
                            alt={active.title}
                            className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                         />
@@ -211,7 +211,7 @@ export function ExpandableCard() {
                >
                   <div className="relative h-50 lg:h-60 z-0">
                      <Image
-                        src={card.imageUrl}
+                        src={card.imageUrl[0]}
                         alt={card.title}
                         className="object-cover w-full h-full relative z-0"
                         width={1920}
