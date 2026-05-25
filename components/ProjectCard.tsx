@@ -8,6 +8,16 @@ import PrimaryButton from './button/PrimaryButton';
 import { motion } from 'motion/react';
 import TechStackGrid from './TechStackGrid';
 import { IconType } from 'react-icons';
+import {
+   Card,
+   CardContent,
+   CardDescription,
+   CardFooter,
+   CardHeader,
+   CardTitle,
+} from './ui/card';
+import { RiExternalLinkFill, RiGithubFill, RiLink } from 'react-icons/ri';
+import { Project } from '@/data/projects';
 
 export type TechItem = {
    icon: IconType;
@@ -16,116 +26,111 @@ export type TechItem = {
 };
 
 interface ProjectProps {
+   id: string;
    imageUrl: string | StaticImageData;
    title: string;
    description: string;
-   features: string[];
    techStack: TechItem[];
    liveLink?: string;
    repoLink?: string;
-   imageBg?: string;
    order?: 0 | 1 | 2 | 3;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
+   id,
    imageUrl,
    title,
    description,
-   features,
    techStack,
    liveLink,
    repoLink,
-   imageBg = 'bg-green-100',
    order = 0,
 }) => {
    return (
       <motion.div
-         className={cn(
-            'flex p-6 flex-col lg:flex-row rounded-lg shadow-md bg-primary/5 border border-primary/20',
-            order === 1 && 'lg:flex-row-reverse'
-         )}
-         initial={{ opacity: 0, y: -50 }}
+         initial={{ opacity: 0, y: 50 }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.6, ease: 'easeOut' }}
          viewport={{ once: true }}
+         key={title}
+         className={cn(
+            `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
+            { 'lg:col-span-4': order === 0 || order === 3 },
+            { 'lg:col-span-3': order === 1 || order === 2 }
+         )}
       >
-         {/* Left - Image Container */}
-         <motion.div
-            className={cn(
-               'lg:w-1/2 rounded-md border border-gray-300 flex items-center justify-center relative z-0',
-               imageBg
-            )}
-            initial={{ opacity: 0, x: order === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
-            viewport={{ once: true }}
-         >
+         <div className="relative h-50 lg:h-60 z-0">
             <Image
                src={imageUrl}
-               alt={`${title} screenshot`}
-               className="w-full h-auto rounded-md object-cover relative z-0"
-               style={{ objectFit: 'cover' }}
-               priority
-               placeholder="blur"
+               alt={title}
+               className="object-cover w-full h-full relative z-0"
+               width={1920}
+               height={1080}
             />
-         </motion.div>
-
-         {/* Right - Content */}
-         <motion.div
-            className={cn(
-               `lg:w-1/2 flex flex-col justify-between ${
-                  order === 1 ? 'lg:pr-6' : 'lg:pl-6'
-               } pt-4 lg:pt-0 relative`
-            )}
-            initial={{ opacity: 0, x: order === 0 ? 50 : -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
-            viewport={{ once: true }}
-         >
-            <div>
-               <h3 className="font-bold text-lg sm:text-xl lg:text-2xl mb-2">
+         </div>
+         <Card className="border border-primary/20 bg-primary/5 rounded-t-none relative z-0">
+            <CardHeader>
+               <CardTitle className="text-white dark:text-gray-800 text-lg">
                   {title}
-               </h3>
-               <p className="mb-4 text-justify text-sm sm:text-base md:text-md">
+               </CardTitle>
+               <CardDescription className="flex text-white dark:text-gray-800 items-center gap-2">
+                  <TechStackGrid techStack={techStack} />
+               </CardDescription>
+            </CardHeader>
+            <CardContent>
+               <div className="text-white dark:text-gray-800 font-light text-base-content/70 h-[4.5em] overflow-hidden line-clamp-3 wrap-break-word break-all hyphens-auto">
                   {description}
-               </p>
-               <h3 className="font-semibold sm:text-md lg:text-lg mb-3">
-                  Key Features
-               </h3>
-               <ul className="list-decimal list-inside mb-4 space-y-1 text-sm sm:text-base md:text-md">
-                  {features.map((feature, idx) => (
-                     <li key={idx}>{feature}</li>
-                  ))}
-               </ul>
-            </div>
-
-            {/* Technology badges */}
-            <div className="mb-4">
-               <TechStackGrid techStack={techStack} />
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-4">
-               {liveLink && (
+               </div>
+            </CardContent>
+            <CardFooter className="justify-between gap-3 max-sm:flex-col max-sm:items-stretch">
+               <div className="flex gap-3 w-full justify-end">
                   <Link
-                     href={liveLink}
+                     href={liveLink || '#'}
                      target="_blank"
                      rel="noopener noreferrer"
+                     className="group flex items-center rounded-full transition-all duration-300"
                   >
-                     <PrimaryButton>Live Demo</PrimaryButton>
+                     <div className="flex px-2 items-center gap-1 rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
+                        <RiLink size={20} />
+                        <span
+                           className={` font-semibold text-sm text-white text-nowrap dark:text-black`}
+                        >
+                           Live
+                        </span>
+                     </div>
                   </Link>
-               )}
-               {repoLink && (
                   <Link
-                     href={repoLink}
+                     href={repoLink || '#'}
                      target="_blank"
                      rel="noopener noreferrer"
+                     className="group flex items-center rounded-full transition-all duration-300"
                   >
-                     <OutlineButton>Github Repo</OutlineButton>
+                     <div className=" flex items-center px-1 pr-2 gap-1 rounded-full group bg-primary/5 border border-primary/30 w-full duration-300 p-1 hover:bg-primary text-white dark:text-black">
+                        <RiGithubFill size={22} />
+                        <span
+                           className={`font-semibold text-sm text-white text-nowrap dark:text-black`}
+                        >
+                           Github Repo
+                        </span>
+                     </div>
                   </Link>
-               )}
-            </div>
-         </motion.div>
+
+                  <Link
+                     href={`/projects/${id}`}
+                     className="group cursor-pointer flex items-center rounded-full transition-all duration-300"
+                  >
+                     <div className="rounded-full flex items-center gap-1 px-2 group bg-primary/5 border border-primary/30 w-full duration-300 p-1.5 hover:bg-primary text-white dark:text-black">
+                        <RiExternalLinkFill size={18} />
+                        <span
+                           className={`font-semibold transition-all duration-300 text-sm text-white text-nowrap dark:text-black`}
+                        >
+                           Details
+                        </span>
+                     </div>
+                  </Link>
+               </div>
+            </CardFooter>
+         </Card>
       </motion.div>
    );
 };

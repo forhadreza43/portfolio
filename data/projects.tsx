@@ -47,7 +47,7 @@ import BetterAUth from './icons/BetterAUthIcon';
 export type Project = {
    id: string;
    imageBg?: string;
-   order: 0 | 1 | 2;
+   order: 0 | 1 | 2 | 3;
    imageUrl: string[];
    title: string;
    description: string;
@@ -125,38 +125,7 @@ export const projects = [
       repoLink: 'https://github.com/forhadreza43/godesh-client',
       note: '',
    },
-   {
-      id: 'glowsera',
-      imageBg: 'bg-orange-100',
-      order: 2,
-      imageUrl: [glow1, glow2, glow3, glow4, glow5],
-      title: 'Glowsera',
-      description:
-         'Glowsera is a modern beauty and cosmetics e-commerce frontend prototype designed to deliver a premium shopping experience. It showcases skincare and beauty products with intuitive browsing, smart filtering, and curated discovery sections such as categories, concerns, and trending collections. The platform emphasizes user engagement through wishlists, carts, reviews, and expert blogs, while maintaining a clean and responsive UI across all devices.',
-      features: [
-         'Showcase featured products in an interactive carousel on the landing page',
-         'Display best selling and new arrival product sections',
-         'Browse products by category such as serum, sunscreen, and face mask',
-         'Shop products based on skin concerns like acne, dryness, and hair fall',
-         'View customer reviews and expert-written blog content',
-         'Advanced product filtering by category, price range, availability, and tags',
-         'Sorting options including latest, most popular, price low to high and high to low',
-         'Product search by name, type, or category',
-         'Add products to wishlist and shopping cart',
-         'Move products from wishlist to cart or remove them easily',
-         'Support for checkout flow UI including online payment and cash on delivery (frontend only)',
-         'Fully responsive design optimized for mobile, tablet, and desktop devices',
-      ],
-      techStack: [
-         { icon: RiNextjsLine, name: 'Next.js', color: '#FFFFFF' },
-         { icon: BiLogoTailwindCss, name: 'Tailwind CSS', color: '#06B6D4' },
-         { icon: BiLogoTypescript, name: 'TypeScript', color: '#3178c6' },
-         { icon: SiShadcnui, name: 'ShadcnUI', color: '#FFFFFF' },
-      ],
-      liveLink: 'https://glowsera-client.vercel.app',
-      repoLink: 'https://github.com/forhadreza43/glowsera-client',
-      note: '',
-   },
+
    {
       id: 'alumni-network',
       imageBg: 'bg-green-50',
@@ -193,6 +162,38 @@ export const projects = [
       ],
       liveLink: 'https://alumni-network-six.vercel.app',
       repoLink: 'https://github.com/forhadreza43/alumni-network',
+      note: '',
+   },
+   {
+      id: 'glowsera',
+      imageBg: 'bg-orange-100',
+      order: 2,
+      imageUrl: [glow1, glow2, glow3, glow4, glow5],
+      title: 'Glowsera',
+      description:
+         'Glowsera is a modern beauty and cosmetics e-commerce frontend prototype designed to deliver a premium shopping experience. It showcases skincare and beauty products with intuitive browsing, smart filtering, and curated discovery sections such as categories, concerns, and trending collections. The platform emphasizes user engagement through wishlists, carts, reviews, and expert blogs, while maintaining a clean and responsive UI across all devices.',
+      features: [
+         'Showcase featured products in an interactive carousel on the landing page',
+         'Display best selling and new arrival product sections',
+         'Browse products by category such as serum, sunscreen, and face mask',
+         'Shop products based on skin concerns like acne, dryness, and hair fall',
+         'View customer reviews and expert-written blog content',
+         'Advanced product filtering by category, price range, availability, and tags',
+         'Sorting options including latest, most popular, price low to high and high to low',
+         'Product search by name, type, or category',
+         'Add products to wishlist and shopping cart',
+         'Move products from wishlist to cart or remove them easily',
+         'Support for checkout flow UI including online payment and cash on delivery (frontend only)',
+         'Fully responsive design optimized for mobile, tablet, and desktop devices',
+      ],
+      techStack: [
+         { icon: RiNextjsLine, name: 'Next.js', color: '#FFFFFF' },
+         { icon: BiLogoTailwindCss, name: 'Tailwind CSS', color: '#06B6D4' },
+         { icon: BiLogoTypescript, name: 'TypeScript', color: '#3178c6' },
+         { icon: SiShadcnui, name: 'ShadcnUI', color: '#FFFFFF' },
+      ],
+      liveLink: 'https://glowsera-client.vercel.app',
+      repoLink: 'https://github.com/forhadreza43/glowsera-client',
       note: '',
    },
    {

@@ -15,7 +15,7 @@ export default function Home() {
          <div>
             <Hero />
             <ExpandableCard />
-            {/* <Projects />  */}
+            <Projects /> 
             <Skills />
             <Experience />
             <AboutMe />

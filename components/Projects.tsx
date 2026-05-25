@@ -4,33 +4,22 @@
 import ProjectCard from './ProjectCard';
 import { projects } from '@/data/projects';
 // import SectionTitle from './SectionTitle';
-
+import ProjectBentoGrid from './ProjectBentoGrid';
+import SectionHeading from './SectionHeading';
+import SectionTitle from './SectionTitle';
 const Projects = () => {
    return (
       <section id="projects" className="scroll-mt-30 mt-12 lg:mt-20">
-         {/* <SectionTitle className="text-center py-4 md:pb-6">
-            Projects
-         </SectionTitle> */}
-         {/* <SectionHeading>Discover what I've created</SectionHeading> */}
-         <div className="flex flex-col gap-6">
-            {
-               /* Map through the projects array to render ProjectCard components */
-               projects.map((project, index) => (
-                  <ProjectCard
-                     key={index}
-                     imageBg={project.imageBg}
-                     order={project.order as 0 | 1 | 2 | 3}
-                     imageUrl={project.imageUrl[0]}
-                     title={project.title}
-                     description={project.description}
-                     features={project.features}
-                     techStack={project.techStack}
-                     liveLink={project.liveLink}
-                     repoLink={project.repoLink}
-                  />
-               ))
-            }
-         </div>
+         <SectionHeading className="text-center py-3">Projects</SectionHeading>
+         <SectionTitle className="tracking-tight text-center pb-4">
+            Discover what I've created
+         </SectionTitle>
+         <p className="text-center text-base-content/70 max-w-xl mx-auto mb-12">
+            Each piece reflects my passion for innovation and commitment to
+            delivering high-quality results. Feel free to explore and get
+            inspired!
+         </p>
+         <ProjectBentoGrid />
       </section>
    );
 };
