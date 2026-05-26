@@ -53,6 +53,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
          transition={{ duration: 0.6, ease: 'easeOut' }}
          viewport={{ once: true }}
          key={title}
+         id={ `${id}`}
          className={cn(
             `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
             { 'lg:col-span-4': order === 0 || order === 3 },
