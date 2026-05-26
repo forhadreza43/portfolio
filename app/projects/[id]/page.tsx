@@ -67,7 +67,7 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                   </div>
 
                   {/* Gallery Slider */}
-                  <Card className="overflow-hidden border border-primary/30 shadow-xl">
+                  <Card className="overflow-hidden border bg-primary/15 border-primary/15 shadow-xl p-0">
                      <CardContent className="p-0">
                         <Carousel className="w-full">
                            <CarouselContent>
@@ -87,8 +87,8 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                               ))}
                            </CarouselContent>
 
-                           <CarouselPrevious className="left-4 border border-primary/30 bg-primary/5 text-primary hover:bg-primary" />
-                           <CarouselNext className="right-4 border border-primary/30 bg-primary/5 text-primary hover:bg-primary" />
+                           <CarouselPrevious className="left-4 border border-primary/30 bg-primary text-white hover:bg-primary hover:scale-105 hover:-translate-x-1 dark:bg-primary dark:border-primary/30 dark:hover:bg-primary dark:hover:text-white" />
+                           <CarouselNext className="right-4 border border-primary/30 bg-primary text-white hover:bg-primary hover:scale-105 hover:translate-x-1 dark:bg-primary dark:border-primary/30 dark:hover:bg-primary dark:hover:text-white" />
                         </Carousel>
                      </CardContent>
                   </Card>
@@ -97,7 +97,7 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                {/* RIGHT SIDE */}
                <div className="space-y-6">
                   {/* Action Buttons */}
-                  <Card className="border border-primary/30 shadow-lg bg-primary/5">
+                  <Card className="border border-primary/30 shadow bg-primary/5">
                      <CardContent className="space-y-4 p-6">
                         <div className="flex flex-col gap-3">
                            <Button
@@ -142,9 +142,9 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                   </Card>
 
                   {/* Tech Stack */}
-                  <Card className="border border-primary/30 shadow-lg bg-primary/5">
+                  <Card className="border border-primary/30 shadow bg-primary/5">
                      <CardContent className="p-6">
-                        <h2 className="mb-5 text-xl font-semibold text-white">
+                        <h2 className="mb-5 text-xl font-semibold text-white dark:text-gray-800">
                            Tech Stack
                         </h2>
 
@@ -155,7 +155,7 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                               return (
                                  <div
                                     key={index}
-                                    className="flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 text-white px-4 py-2 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                                    className="flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 text-white dark:text-gray-800 px-4 py-2 shadow transition hover:-translate-y-1 hover:shadow-md"
                                  >
                                     <Icon
                                        size={22}
@@ -173,8 +173,8 @@ const ProjectDetailsPage = async ({ params }: Props) => {
                   </Card>
 
                   {/* Features */}
-                  <Card className="border border-primary/30 shadow-lg bg-primary/5">
-                     <CardContent className="p-6 text-white">
+                  <Card className="border border-primary/30 shadow bg-primary/5">
+                     <CardContent className="p-6 text-white dark:text-gray-800">
                         <h2 className="mb-5 text-xl font-semibold">
                            Key Features
                         </h2>
