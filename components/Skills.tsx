@@ -255,8 +255,6 @@ const skillsData = {
          borderColor: 'border-red-500',
          shadowColor: 'hover:shadow-red-500/40',
       },
-   ],
-   AI: [
       {
          name: 'Claude',
          icon: <SiClaude className="text-orange-500" />,
