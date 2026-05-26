@@ -11,7 +11,7 @@ import AwardsAndCertifications from '@/components/AwardsAndCertifications';
 
 export default function Home() {
    return (
-      <div className="w-11/12 max-w-7xl mx-auto">
+      <div className="">
          <div>
             <Hero />
             {/* <ExpandableCard /> */}

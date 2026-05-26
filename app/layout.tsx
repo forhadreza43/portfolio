@@ -56,7 +56,7 @@ export default function RootLayout({
                      closeButton
                   />
                   {/* <Hero /> */}
-                  <div className="relative z-20 overflow-hidden bg-clip-text">
+                  <div className="relative z-20 overflow-hidden bg-clip-text w-11/12 max-w-7xl mx-auto">
                      <FloatingNav navItems={navItems} />
                      {children}
                      <Footer />
