@@ -36,9 +36,9 @@ const ProjectDetailsPage = async ({ params }: Props) => {
 
    return (
       <section className="bg-background">
-         <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-7xl pt-8">
+         <div className="mx-auto max-w-7xl pt-28">
             {/* Back Button */}
-            <div className="mb-8">
+            <div className="mb-6">
                <Button
                   asChild
                   variant="ghost"

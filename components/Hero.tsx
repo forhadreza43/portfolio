@@ -4,7 +4,7 @@ import { FloatingNav } from './FloatingNav';
 import { navItems } from '@/data/navItem';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
-import { Typewriter } from 'react-simple-typewriter';
+// import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'motion/react';
 // import Lottie from "lottie-react";
 import ResumeDownload from './ResumeDownload';
@@ -15,7 +15,7 @@ import SocialButton from './SocialButton';
 import SectionTitle from './SectionTitle';
 
 const Hero = () => {
-   const words = ['Quick Learner', 'Tech Enthusiast'];
+   // const words = ['Quick Learner', 'Tech Enthusiast'];
 
    return (
       <div id="home" className="relative overflow-hidden w-full min-h-[70vh]">
@@ -35,7 +35,7 @@ const Hero = () => {
          />
 
          {/* Sticky Nav */}
-         <FloatingNav navItems={navItems} />
+         {/* <FloatingNav navItems={navItems} /> */}
 
          <section className="pt-28 md:pt-40 mx-auto">
             <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-16">

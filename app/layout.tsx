@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Poppins, Caveat } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-// import Hero from "@/components/Hero";
 import { Toaster } from '@/components/ui/sonner';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/animation/BackToTop';
 import { cn } from '@/lib/utils';
+import { navItems } from '@/data/navItem';
+import { FloatingNav } from '@/components/FloatingNav';
 
 const geistSans = Geist({
    variable: '--font-geist-sans',
@@ -56,6 +57,7 @@ export default function RootLayout({
                   />
                   {/* <Hero /> */}
                   <div className="relative z-20 overflow-hidden bg-clip-text">
+                     <FloatingNav navItems={navItems} />
                      {children}
                      <Footer />
                   </div>
