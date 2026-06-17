@@ -24,6 +24,10 @@ import glow3 from '@/assets/projectsInfo/glowsera/3.png';
 import glow4 from '@/assets/projectsInfo/glowsera/4.png';
 import glow5 from '@/assets/projectsInfo/glowsera/5.png';
 
+import appli1 from '@/assets/projectsInfo/appli-tract/1.png';
+import appli2 from '@/assets/projectsInfo/appli-tract/2.png';
+import appli3 from '@/assets/projectsInfo/appli-tract/3.png';
+
 import {
    SiReactrouter,
    SiReact,
@@ -33,6 +37,7 @@ import {
    SiMongoose,
    SiShadcnui,
    SiPrisma,
+   SiGooglegemini,
 } from 'react-icons/si';
 import {
    BiLogoTailwindCss,
@@ -95,7 +100,6 @@ export const projects = [
       repoLink: 'https://github.com/forhadreza43/quran-web-app',
       note: '',
    },
-
    {
       id: 'go-desh',
       imageBg: 'bg-green-100',
@@ -125,7 +129,48 @@ export const projects = [
       repoLink: 'https://github.com/forhadreza43/godesh-client',
       note: '',
    },
-
+   {
+      id: 'appli-tract',
+      imageBg: 'bg-green-800',
+      order: 2,
+      imageUrl: [appli1, appli2, appli3],
+      title: 'Appli-Tract',
+      description:
+         'AI Job Tracker, also known as APPLI-TRACT, is an intelligent job application management platform built to help job seekers organize, analyze, and improve their application pipeline. The application allows users to paste raw job descriptions from emails, PDFs, LinkedIn posts, or plain text, then uses Google Gemini AI to extract structured job information such as company name, job title, location, salary range, skills, responsibilities, qualifications, benefits, deadlines, and more. After extraction, users can review the extracted data, save jobs to a personal dashboard, update application status, search and filter opportunities, and visualize job search progress through analytics. The project combines a modern Next.js App Router frontend with server actions, Better Auth authentication, Prisma ORM, PostgreSQL persistence, AI-powered extraction, and interactive dashboard charts.',
+      features: [
+         'AI-powered job description extraction using Google Gemini',
+         'Structured extraction of job title, company, location, salary, skills, responsibilities, qualifications, benefits, deadlines, and vacancies',
+         'AI confidence scoring for extracted job details',
+         'Gemini Model selector for extraction',
+         'Job creation from extracted AI results',
+         'Personal dashboard for saved job applications',
+         'Application status tracking such as applied, interview, offered, and rejected',
+         'Edit and delete saved jobs',
+         'Sortable job management table',
+         'Filters by job type, work mode, and application status',
+         'Dashboard analytics with total jobs, interviews, offers, and response rate',
+         'Company distribution bar chart',
+         'Work mode and job type pie charts',
+         'Secure email/password authentication with Better Auth',
+         'PostgreSQL database persistence with Prisma ORM',
+         'Responsive UI built with Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, and Radix UI',
+         'TanStack Table-powered job listing',
+         'Server actions for job CRUD and AI extraction workflows',
+      ],
+      techStack: [
+         { icon: RiNextjsLine, name: 'Next.js', color: '#FFFFFF' },
+         { icon: BiLogoTailwindCss, name: 'Tailwind CSS', color: '#06B6D4' },
+         { icon: SiShadcnui, name: 'ShadcnUI', color: '#FFFFFF' },
+         { icon: BiLogoTypescript, name: 'TypeScript', color: '#3178c6' },
+         { icon: BiLogoPostgresql, name: 'PostgreSQL', color: '#336791' },
+         { icon: SiPrisma, name: 'Prisma', color: '#5A67D8' },
+         { icon: BetterAUth, name: 'Better Auth', color: '#000000' },
+         { icon: SiGooglegemini, name: 'Google Gemini API', color: '#4285F4' },
+      ],
+      liveLink: 'https://appli-tract.vercel.app',
+      repoLink: 'https://github.com/forhadreza43/ai-job-tracker',
+      note: '',
+   },
    {
       id: 'alumni-network',
       imageBg: 'bg-green-50',
@@ -167,7 +212,7 @@ export const projects = [
    {
       id: 'glowsera',
       imageBg: 'bg-orange-100',
-      order: 2,
+      order: 1,
       imageUrl: [glow1, glow2, glow3, glow4, glow5],
       title: 'Glowsera',
       description:
@@ -199,7 +244,7 @@ export const projects = [
    {
       id: 'stay-swift',
       imageBg: 'bg-blue-50',
-      order: 0,
+      order: 2,
       imageUrl: [stayswift],
       title: 'StaySwift',
       description:
@@ -225,7 +270,7 @@ export const projects = [
    {
       id: 'eco-vista',
       imageBg: 'bg-green-50',
-      order: 1,
+      order: 0,
       imageUrl: [eco],
       title: 'Eco Vista',
       description:
@@ -249,7 +294,7 @@ export const projects = [
    {
       id: 'study-together',
       imageBg: 'bg-pink-50',
-      order: 2,
+      order: 1,
       imageUrl: [study1],
       title: 'Study Together',
       description:
@@ -277,7 +322,7 @@ export const projects = [
    {
       id: 'recipe-book',
       imageBg: 'bg-white',
-      order: 0,
+      order: 2,
       imageUrl: [rec1],
       title: 'Recipe Book',
       description:
