@@ -292,37 +292,9 @@ export const projects = [
       note: 'Need Location Access',
    },
    {
-      id: 'study-together',
-      imageBg: 'bg-pink-50',
-      order: 1,
-      imageUrl: [study1],
-      title: 'Study Together',
-      description:
-         'A Online Assignment Management Platform A collaborative platform enabling students and evaluators to manage assignments efficiently.',
-      features: [
-         'Create assignments',
-         'Submit assignments ',
-         'Evaluate submissions and assign marks',
-         'Track assignment status in real-time (Pending/Completed)',
-         'Evaluate assignments',
-         'See Self attempted assignments',
-      ],
-      techStack: [
-         { icon: SiReact, name: 'React.js', color: '#61DAFB' },
-         { icon: SiExpress, name: 'Express.js', color: '#339933' },
-         { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
-         { icon: BiLogoFirebase, name: 'Firebase', color: '#FFCA28' },
-         { icon: SiReactrouter, name: 'React-Router', color: '#CA4242' },
-         { icon: BiLogoTailwindCss, name: 'Tailwind CSS', color: '#06B6D4' },
-      ],
-      liveLink: 'https://group-study-app-89073.web.app/',
-      repoLink: 'https://github.com/forhadreza43/group-study-client',
-      note: '',
-   },
-   {
       id: 'recipe-book',
       imageBg: 'bg-white',
-      order: 2,
+      order: 1,
       imageUrl: [rec1],
       title: 'Recipe Book',
       description:
