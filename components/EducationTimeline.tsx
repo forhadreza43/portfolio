@@ -14,6 +14,8 @@ interface TimelineEvent {
    description: string;
    projects?: TimelineProject[];
    side: 'left' | 'right';
+   result: string;
+   scale: string;
 }
 
 const events: TimelineEvent[] = [
@@ -25,15 +27,19 @@ const events: TimelineEvent[] = [
          'Graduated with a strong foundation in software development, algorithms, and system design. My academic journey equipped me with the skills and knowledge to excel in the tech industry.',
 
       side: 'right',
+      result: '3.66',
+      scale: '4.00',
    },
    {
-      passingYear: '2019',
+      passingYear: '2020',
       nameOfDegree: 'Diploma in Engineering in Shipbuilding Technology',
       institution: 'Bangladesh Institute of Marine Technology (BIMT)',
       description:
          'Completed a comprehensive diploma program focused on shipbuilding technology, gaining practical skills in marine engineering, design, and construction. This experience provided me with a unique perspective on complex systems and project management.',
 
       side: 'left',
+      result: '3.67',
+      scale: '4.00',
    },
    {
       passingYear: '2017',
@@ -42,6 +48,8 @@ const events: TimelineEvent[] = [
       description:
          'Completed my higher secondary education with a focus on science, laying the groundwork for my future studies in computer science and engineering. This period was crucial in shaping my analytical thinking and problem-solving skills.',
       side: 'right',
+      result: '4.97',
+      scale: '5.00',
    },
    {
       passingYear: '2015',
@@ -50,6 +58,8 @@ const events: TimelineEvent[] = [
       description:
          'Completed my secondary education, marking the beginning of my academic journey. This milestone provided me with a strong foundation in various subjects and ignited my passion for learning and growth.',
       side: 'left',
+      result: '5.00',
+      scale: '5.00',
    },
 ];
 
@@ -87,7 +97,22 @@ const TimelineCard = ({
 
          {event.institution && (
             <p className="text-sm md:text-base text-gray-400 dark:text-gray-600 leading-relaxed">
+               {event.institution && isLeft && (
+                  <span className="mr-6 border border-dashed rounded-full px-1 py-0 text-xs bg-primary/5 border-primary/20 text-primary">
+                     {event.result} / {event.scale}
+                  </span>
+               )}{' '}
                {event.institution}
+               {event.institution && !isLeft && (
+                  <span className="ml-6 border border-dashed rounded-full px-1 py-0 text-xs bg-primary/5 border-primary/20 text-primary">
+                     {event.result} / {event.scale}
+                  </span>
+               )}
+            </p>
+         )}
+         {event.description && (
+            <p className="text-sm/5 md:text-base/5 text-gray-500 dark:text-gray-600 mt-2">
+               {event.description}
             </p>
          )}
       </div>

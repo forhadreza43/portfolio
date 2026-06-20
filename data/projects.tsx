@@ -65,6 +65,7 @@ export type Project = {
    liveLink: string;
    repoLink: string;
    note?: string;
+   recentTag?: string;
 };
 
 //!Project order should be 0-1-2
@@ -110,6 +111,7 @@ export const projects = [
       liveLink: 'https://appli-tract.vercel.app',
       repoLink: 'https://github.com/forhadreza43/ai-job-tracker',
       note: '',
+      recentTag: 'Most Recent',
    },
    {
       id: 'quran-mazid',
@@ -142,6 +144,7 @@ export const projects = [
       liveLink: 'https://quran-web-app-client-olive.vercel.app',
       repoLink: 'https://github.com/forhadreza43/quran-web-app',
       note: '',
+      recentTag: 'Recent',
    },
    {
       id: 'alumni-network',

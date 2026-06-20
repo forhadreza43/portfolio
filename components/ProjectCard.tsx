@@ -34,6 +34,7 @@ interface ProjectProps {
    liveLink?: string;
    repoLink?: string;
    order?: 0 | 1 | 2 | 3;
+   recentTag?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -45,6 +46,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
    liveLink,
    repoLink,
    order = 0,
+   recentTag,
 }) => {
    return (
       <motion.div
@@ -53,7 +55,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
          transition={{ duration: 0.6, ease: 'easeOut' }}
          viewport={{ once: true }}
          key={title}
-         id={ `${id}`}
+         id={`${id}`}
          className={cn(
             `relative rounded-xl pt-0 shadow-lg overflow-hidden`,
             { 'lg:col-span-4': order === 0 || order === 3 },
@@ -71,8 +73,13 @@ const ProjectCard: React.FC<ProjectProps> = ({
          </div>
          <Card className="border border-primary/20 bg-primary/5 rounded-t-none relative z-0">
             <CardHeader>
-               <CardTitle className="text-white dark:text-gray-800 text-lg">
-                  {title}
+               <CardTitle className="text-white dark:text-gray-800 text-lg flex items-center justify-between">
+                  <span>{title} </span>
+                  {recentTag && (
+                     <span className="border border-dashed rounded-full px-2 py-0.5 text-sm bg-primary/5 border-primary/20 text-primary">
+                        {recentTag}
+                     </span>
+                  )}
                </CardTitle>
                <CardDescription className="flex text-white dark:text-gray-800 items-center gap-2">
                   <TechStackGrid techStack={techStack} />

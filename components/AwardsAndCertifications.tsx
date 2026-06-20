@@ -16,7 +16,7 @@ const AwardsAndCertifications = () => {
                   <Award size={24} className="mt-0.5   text-primary" />
                   <div>
                      <h3 className="text-lg font-semibold text-gray-200 dark:text-gray-800 mb-2">
-                        Dean's Award for Outstanding Academic Performance.
+                        Dean's Award for Outstanding Academic Excellence.
                      </h3>
                      <p className="text-sm md:text-base text-gray-400 dark:text-gray-600 leading-relaxed">
                         Green University of Bangladesh

@@ -12,6 +12,7 @@ const items = projects.map((project) => (
       liveLink={project.liveLink}
       repoLink={project.repoLink}
       order={project.order as 0 | 1 | 2 | 3}
+      recentTag={project.recentTag}
    />
 ));
 

@@ -14,32 +14,37 @@ interface TimelineEvent {
 
 const events: TimelineEvent[] = [
    {
-      joiningDate: 'Aug 2025',
+      joiningDate: 'June 2025',
       leavingDate: 'Present',
-      role: 'Frontend Developer (Team Leader)',
+      role: 'Frontend Developer & Team Leader (Formerly Full Stack Developer)',
       type: 'Full-time',
       company: 'NextTech Limited',
       location: '744/1 (3rd Floor), Metro Pillar-296, Shewrapara,  Dhaka 1216',
       responsibilities: [
          {
-            role: 'Cross-Functional Leadership',
+            role: 'Team Leadership & Workflow Management',
             description:
-               'Lead a multi-disciplinary team including Backend Developers, UX Designers, and QA Testers, overseeing the full product development lifecycle.',
+               'Organized project workflows, assigned daily tasks to team members, and managed full-stack development life-cycles to ensure timely delivery.',
          },
          {
-            role: 'Technical Architecture',
+            role: 'Frontend Architecture & UI Development',
             description:
-               'Drive the frontend strategy using Next.js and TypeScript, ensuring seamless integration between UI/UX designs and backend APIs.',
+               'Spearheaded frontend development using React.js and Next.js, building fast, responsive, and user-friendly interfaces.',
          },
          {
-            role: 'Project Oversight',
+            role: 'API Integration & Security',
             description:
-               'Manage sprints and workflows to ensure high-quality delivery, from initial wireframing and user testing to final deployment.',
+               'Securely connected modern frontend components to backend RESTful APIs to ensure seamless data flow and robust application security.',
          },
          {
-            role: 'Performance & Quality',
+            role: 'Code Quality Assurance',
             description:
-               'Conduct code reviews and establish testing standards to maintain high performance, accessibility, and code reliability.',
+               'Conducted comprehensive code reviews and guided the development team to maintain high standards of code reliability and overall performance.',
+         },
+         {
+            role: 'Mentorship & Talent Development',
+            description:
+               'Mentored intern students, providing technical training and career guidance to foster their growth in modern web development.',
          },
       ],
       // projects: [
@@ -51,27 +56,37 @@ const events: TimelineEvent[] = [
       // ],
    },
    {
-      joiningDate: 'January 2025',
-      leavingDate: 'June 2025',
-      role: 'MERN Stack Intern',
+      joiningDate: 'February 2025',
+      leavingDate: 'April 2025',
+      role: 'Full Stack Developer Intern',
       type: 'Full-time',
       company: 'ZenSoft Lab',
       location: 'Level 4, 128/3, Dhaka',
       responsibilities: [
          {
-            role: 'Full-Stack Implementation',
+            role: 'Full-Stack Feature Development',
             description:
-               'Developed web applications using the MERN stack, focusing on building responsive React components and scalable Node.js/Express services.',
+               'Designed and developed end-to-end web applications by building interactive React.js frontend and robust Node.js/Express.js backend services.',
          },
          {
-            role: 'Database & API Design',
+            role: 'Database Engineering',
             description:
-               'Assisted in designing MongoDB schemas and developing RESTful APIs to handle complex data structures.',
+               'Architected and managed MongoDB databases, ensuring highly efficient data storage, retrieval, and optimized schema design.',
          },
          {
-            role: 'Agile Collaboration',
+            role: 'Security & Access Control',
             description:
-               'Worked within an agile team to ship features, debug issues, and optimize application performance across the stack.',
+               'Implemented secure user authentication pipelines using JWT and developed comprehensive Admin Panel features equipped with Role-Based Access Control (RBAC).',
+         },
+         {
+            role: 'API Architecture & Integration',
+            description:
+               'Bridged responsive frontend components with backend RESTful APIs to guarantee smooth user experiences and reliable client-server communication.',
+         },
+         {
+            role: 'Deployment & Infrastructure',
+            description:
+               'Handled foundational DevOps tasks, including application deployment, hosting configurations, and server management utilizing cPanel.',
          },
       ],
       // projects: [
