@@ -1,63 +1,54 @@
 'use client';
 
+import { motion } from 'motion/react';
 import React, { JSX } from 'react';
+import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
 import {
+   FaDocker,
+   FaFigma,
    FaGitAlt,
    FaGithub,
-   FaFigma,
    FaNodeJs,
-   FaDocker,
    FaReact,
 } from 'react-icons/fa';
+import { RiGeminiFill, RiJavascriptFill, RiOpenaiFill } from 'react-icons/ri';
 import {
-   SiTailwindcss,
-   SiExpress,
-   SiMongodb,
-   SiCanva,
-   SiNotion,
-   SiNetlify,
-   SiVercel,
-   SiReactquery,
-   SiMysql,
-   SiMongoose,
-   SiPrisma,
    SiAxios,
-   SiVite,
-   SiBun,
-   SiPnpm,
-   SiNpm,
-   SiShadcnui,
    SiBetterauth,
-   SiJsonwebtokens,
+   SiBun,
    SiClaude,
-   SiOpenai,
+   SiExpress,
+   SiJsonwebtokens,
+   SiMongodb,
+   SiMongoose,
+   SiMysql,
+   SiNetlify,
+   SiNotion,
+   SiNpm,
+   SiPnpm,
+   SiPrisma,
    SiRedux,
+   SiShadcnui,
+   SiTailwindcss,
+   SiVercel,
+   SiVite,
 } from 'react-icons/si';
 import {
    TbBrandAdobeIllustrator,
    TbBrandAdobePhotoshop,
    TbBrandNextjs,
-   TbBrandRedux,
 } from 'react-icons/tb';
-import { BiLogoTypescript, BiLogoPostgresql } from 'react-icons/bi';
-import {
-   RiJavascriptFill,
-   RiReactjsLine,
-   RiGeminiFill,
-   RiNextjsFill,
-} from 'react-icons/ri';
 import { VscVscode } from 'react-icons/vsc';
 import SectionHeading from './SectionHeading';
-import { motion } from 'motion/react';
 import PillTabs, { TabItemType } from './shsfui/switch/pill-tabs';
 import SkillCard from './SkillCard';
 // import CursorAiIcon from '@/data/icons/CursorAiIcon';
 import {
    CursorAi,
    GoogleAntigravity,
-   Windsurf,
-   Replit,
    ReactQuery,
+   Replit,
+   Windsurf,
 } from '@boxicons/react';
 
 type SkillData = {
@@ -263,7 +254,7 @@ const skillsData = {
       },
       {
          name: 'ChatGPT',
-         icon: <SiOpenai className="text-white dark:text-gray-800" />,
+         icon: <RiOpenaiFill className="text-white dark:text-gray-800" />,
          borderColor: 'border-white dark:border-gray-800',
          shadowColor: 'hover:shadow-white dark:hover:shadow-gray-800/40',
       },
@@ -299,12 +290,6 @@ const skillsData = {
          icon: <FaFigma className="text-pink-500" />,
          borderColor: 'border-pink-500',
          shadowColor: 'hover:shadow-pink-500/40',
-      },
-      {
-         name: 'Canva',
-         icon: <SiCanva className="text-blue-400" />,
-         borderColor: 'border-blue-400',
-         shadowColor: 'hover:shadow-blue-400/40',
       },
       {
          name: 'Photoshop',

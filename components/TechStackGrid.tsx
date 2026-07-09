@@ -1,6 +1,5 @@
-import React from 'react';
-import { TechCard } from './TechCard';
 import { TechItem } from './ProjectCard';
+import { TechCard } from './TechCard';
 
 interface TechStackGridProps {
    techStack: TechItem[];

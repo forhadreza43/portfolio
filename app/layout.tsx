@@ -1,13 +1,12 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Poppins, Caveat } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/sonner';
+import { FloatingNav } from '@/components/FloatingNav';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/animation/BackToTop';
-import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 import { navItems } from '@/data/navItem';
-import { FloatingNav } from '@/components/FloatingNav';
+import type { Metadata } from 'next';
+import { Caveat, Geist, Geist_Mono, Poppins } from 'next/font/google';
+import './globals.css';
 
 const geistSans = Geist({
    variable: '--font-geist-sans',

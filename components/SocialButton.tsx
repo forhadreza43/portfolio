@@ -1,6 +1,5 @@
-import React, { JSX } from 'react';
-import { FaGithub, FaLinkedin, FaXTwitter, FaFacebook } from 'react-icons/fa6';
-import { HiEnvelope } from 'react-icons/hi2';
+import { JSX } from 'react';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 import Link from 'next/link';
 

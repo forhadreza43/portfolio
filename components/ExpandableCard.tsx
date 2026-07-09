@@ -1,23 +1,23 @@
 'use client';
 import {
    Card,
-   CardHeader,
-   CardDescription,
-   CardTitle,
-   CardFooter,
    CardContent,
+   CardDescription,
+   CardFooter,
+   CardHeader,
+   CardTitle,
 } from '@/components/ui/card';
 import { projects } from '@/data/projects';
-import { RiExternalLinkFill, RiGithubFill, RiLink } from 'react-icons/ri';
-import React, { useEffect, useId, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
 import { useOutsideClick } from '@/hooks/use-outside-click';
-import Image from 'next/image';
-import TechStackGrid from './TechStackGrid';
-import Link from 'next/link';
-import SectionHeading from './SectionHeading';
 import { cn } from '@/lib/utils';
+import { AnimatePresence, motion } from 'motion/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useId, useRef, useState } from 'react';
+import { RiExternalLinkFill, RiGithubFill, RiLink } from 'react-icons/ri';
+import SectionHeading from './SectionHeading';
 import SectionTitle from './SectionTitle';
+import TechStackGrid from './TechStackGrid';
 
 export function ExpandableCard() {
    const [active, setActive] = useState<
@@ -49,9 +49,7 @@ export function ExpandableCard() {
 
    return (
       <div id="projects" className="container">
-         <SectionHeading className="text-center py-3">
-            Projects
-         </SectionHeading>
+         <SectionHeading className="text-center py-3">Projects</SectionHeading>
          <SectionTitle className="tracking-tight text-center pb-4">
             Discover what I've created
          </SectionTitle>

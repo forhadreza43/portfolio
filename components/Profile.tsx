@@ -1,6 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
 import profile from '@/public/profile.jpg';
+import Image from 'next/image';
 export default function Profile({ name = '' }: { name: string }) {
    return (
       <div className="flex items-center gap-2 md:gap-3 lg:gap-4">

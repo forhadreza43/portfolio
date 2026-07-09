@@ -1,22 +1,16 @@
 'use client';
-import { GridPattern } from './magicui/grid-pattern';
-import { FloatingNav } from './FloatingNav';
-import { navItems } from '@/data/navItem';
-import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
-// import { Typewriter } from 'react-simple-typewriter';
-import { motion } from 'motion/react';
-// import Lottie from "lottie-react";
-import ResumeDownload from './ResumeDownload';
-import Link from 'next/link';
-import Image from 'next/image';
 import hero from '@/assets/2.5.png';
-import SocialButton from './SocialButton';
+import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { GridPattern } from './magicui/grid-pattern';
+import ResumeDownload from './ResumeDownload';
 import SectionTitle from './SectionTitle';
+import SocialButton from './SocialButton';
+import { Button } from './ui/button';
 
 const Hero = () => {
-   // const words = ['Quick Learner', 'Tech Enthusiast'];
-
    return (
       <div id="home" className="relative overflow-hidden w-full min-h-[70vh]">
          <GridPattern

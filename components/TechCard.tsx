@@ -1,6 +1,6 @@
 'use client';
-import { IconType } from 'react-icons';
 import { useState } from 'react';
+import { IconType } from 'react-icons';
 
 interface TechCardProps {
    icon: IconType;

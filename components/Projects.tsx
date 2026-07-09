@@ -1,9 +1,5 @@
 'use client';
 
-// import SectionHeading from './SectionHeading';
-import ProjectCard from './ProjectCard';
-import { projects } from '@/data/projects';
-// import SectionTitle from './SectionTitle';
 import ProjectBentoGrid from './ProjectBentoGrid';
 import SectionHeading from './SectionHeading';
 import SectionTitle from './SectionTitle';

@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading';
 import EducationTimeline from './EducationTimeline';
+import SectionHeading from './SectionHeading';
 
 export const Education = () => {
    return (

@@ -1,13 +1,12 @@
 'use client';
+import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { cn } from '@/lib/utils';
-import OutlineButton from '@/components/button/OutlineButton';
-import PrimaryButton from './button/PrimaryButton';
-import { motion } from 'motion/react';
-import TechStackGrid from './TechStackGrid';
 import { IconType } from 'react-icons';
+import { RiExternalLinkFill, RiGithubFill, RiLink } from 'react-icons/ri';
+import TechStackGrid from './TechStackGrid';
 import {
    Card,
    CardContent,
@@ -16,8 +15,6 @@ import {
    CardHeader,
    CardTitle,
 } from './ui/card';
-import { RiExternalLinkFill, RiGithubFill, RiLink } from 'react-icons/ri';
-import { Project } from '@/data/projects';
 
 export type TechItem = {
    icon: IconType;

@@ -1,7 +1,13 @@
 'use client';
 import { motion } from 'motion/react';
 
-const SectionHeading = ({ children, className }: { children: string, className?: string }) => {
+const SectionHeading = ({
+   children,
+   className,
+}: {
+   children: string;
+   className?: string;
+}) => {
    return (
       <motion.h2
          className={`uppercase text-sm lg:text-xs font-mono tracking-widest font-light ${className || ''}`}

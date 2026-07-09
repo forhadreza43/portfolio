@@ -1,10 +1,10 @@
 'use client';
 import person1 from '@/assets/1.5.png';
-import Image from 'next/image';
-import SectionHeading from './SectionHeading';
 import { motion } from 'motion/react';
-import SectionTitle from './SectionTitle';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionHeading from './SectionHeading';
+import SectionTitle from './SectionTitle';
 import { Button } from './ui/button';
 
 const AboutMe = () => {
@@ -13,9 +13,6 @@ const AboutMe = () => {
          id="about"
          className="container relative flex flex-col md:flex-row items-center gap-10 lg:gap-20"
       >
-         {/* <SectionHeading>About me</SectionHeading> */}
-
-         {/* rounded-lg shadow-md bg-primary/5 border border-primary/20 */}
          <motion.div
             className="flex-1 relative"
             initial={{ opacity: 0, y: 50 }}
@@ -23,7 +20,9 @@ const AboutMe = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
          >
-            <SectionHeading className='text-center md:text-left'>About</SectionHeading>
+            <SectionHeading className="text-center md:text-left">
+               About
+            </SectionHeading>
             <SectionTitle className="pt-3 pb-4">
                Developer who loves to build stuff
             </SectionTitle>

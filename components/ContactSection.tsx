@@ -1,14 +1,14 @@
 'use client';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2Icon, Mail, MapPin } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
-import SectionHeading from './SectionHeading';
-import { toast } from 'sonner';
-import { motion } from 'motion/react';
 import emailjs from '@emailjs/browser';
+import { Loader2Icon, Mail, MapPin } from 'lucide-react';
+import { motion } from 'motion/react';
+import { useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+import { toast } from 'sonner';
+import SectionHeading from './SectionHeading';
 import SectionTitle from './SectionTitle';
 export default function ContactSection() {
    const [formData, setFormData] = useState({
@@ -60,7 +60,9 @@ export default function ContactSection() {
                viewport={{ once: true }}
             >
                <div>
-                  <SectionHeading className='text-center md:text-left'>Contact Me</SectionHeading>
+                  <SectionHeading className="text-center md:text-left">
+                     Contact Me
+                  </SectionHeading>
                   <SectionTitle className="pt-3 pb-4">Let's talk!</SectionTitle>
                   <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
                      Feel free to reach out! I'm here to help and will respond
