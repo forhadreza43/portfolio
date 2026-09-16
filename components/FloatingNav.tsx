@@ -8,7 +8,6 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import React, { JSX, useEffect, useState } from 'react';
-import { ThreeDCard } from './3d-card';
 import MoreMenu from './MoreMenu';
 import Profile from './Profile';
 import ResumeDownload from './ResumeDownload';
@@ -97,7 +96,7 @@ export const FloatingNav = ({
                   isScrolled ? isScrolledBgClass : notScrolledBgClass
                )}
             >
-               <ThreeDCard className="w-full">
+               <div className="w-full">
                   <div className="flex items-center justify-between gap-4">
                      {/* Logo */}
                      <div className="w-40 shrink-0 transform -translate-x-2">
@@ -213,7 +212,7 @@ export const FloatingNav = ({
                         </SheetContent>
                      </Sheet>
                   </div>
-               </ThreeDCard>
+               </div>
             </motion.header>
          )}
       </AnimatePresence>
