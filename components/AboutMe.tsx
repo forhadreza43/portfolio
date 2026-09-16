@@ -27,7 +27,7 @@ const AboutMe = () => {
                Developer who loves to build stuff
             </SectionTitle>
             <p className="text-justify text-sm sm:text-base md:text-md text-base-content/70 wrap-break-word hyphens-auto">
-               Hello! I&apos;m Forhad Reza, a passionate web developer who
+               Hello! I&apos;m Engr. Md. Forhad Reza, a passionate web developer who
                thrives on creating innovative solutions that tackle complex user
                challenges.
             </p>

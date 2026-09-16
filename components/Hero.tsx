@@ -51,7 +51,7 @@ const Hero = () => {
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.4, duration: 0.6 }}
                   >
-                     Forhad Reza
+                     Engr. Md. Forhad Reza
                   </motion.p>
 
                   <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold">

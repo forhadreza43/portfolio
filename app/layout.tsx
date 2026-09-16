@@ -30,7 +30,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-   title: 'Forhad Reza',
+   title: 'Engr. Md. Forhad Reza',
    description: 'MERN Stack Developer',
 };
 

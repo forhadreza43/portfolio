@@ -1,4 +1,4 @@
-# 🚀 Forhad Reza - Portfolio
+# 🚀 Engr. Md. Forhad Reza - Portfolio
 
 A modern, responsive portfolio website built with Next.js 15, showcasing my skills, projects, and experience as a MERN Stack Developer.
 
