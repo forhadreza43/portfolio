@@ -5,7 +5,15 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { navItems } from '@/data/navItem';
 import type { Metadata } from 'next';
-import { Caveat, Geist, Geist_Mono, Poppins } from 'next/font/google';
+import {
+   Arizonia,
+   Caveat,
+   Geist,
+   Geist_Mono,
+   Italianno,
+   Poppins,
+   The_Nautigal
+} from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
@@ -29,6 +37,24 @@ const caveat = Caveat({
    subsets: ['latin'],
 });
 
+const italianno = Italianno({
+   variable: '--font-italianno',
+   subsets: ['latin'],
+   weight: ['400'],
+});
+
+const arizonia = Arizonia({
+   variable: '--font-arizonia',
+   subsets: ['latin'],
+   weight: ['400'],
+});
+
+const nautigal = The_Nautigal({
+   variable: '--font-nautigal',
+   subsets: ['latin'],
+   weight: ['400', '700'],
+});
+
 export const metadata: Metadata = {
    title: 'Engr. Md. Forhad Reza',
    description: 'MERN Stack Developer',
@@ -43,7 +69,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
          <head></head>
          <body
-            className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
+            className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${italianno.variable} ${arizonia.variable} ${nautigal.variable} antialiased`}
          >
             <ThemeProvider>
                <div className="relative w-full overflow-hidden">

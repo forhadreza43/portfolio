@@ -1,6 +1,6 @@
 import profile from '@/public/profile.jpg';
 import Image from 'next/image';
-export default function Profile({ name = '' }: { name: string }) {
+export default function Profile({ name = 'Engr. Md. Forhad Reza' }: { name: string }) {
    return (
       <div className="flex items-center gap-2 md:gap-3 lg:gap-4">
          <Image
@@ -10,7 +10,7 @@ export default function Profile({ name = '' }: { name: string }) {
             height={100}
             className="rounded-full w-7 md:w-8 lg:w-9 h-auto object-cover relative z-0"
          />
-         <p className="hidden md:block text-md md:text-xl lg:text-2xl text-nowrap">
+         <p className="font-arizonia font-light hidden md:block text-md md:text-2xl lg:text-3xl text-nowrap">
             {name}
          </p>
       </div>
