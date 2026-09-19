@@ -18,14 +18,15 @@ export default function ContactSection() {
    });
    const [loading, setLoading] = useState(false);
    const isActive = formData?.name && formData?.email && formData?.message;
+
    const sendEmail = (e: React.FormEvent) => {
       e.preventDefault();
       setLoading(true);
 
       emailjs
          .send(
-            'service_ue70kok',
-            'template_op8mbcw',
+            'service_23fvflg',
+            'template_g8pmvk4',
             {
                title: formData.name,
                name: formData.name,
