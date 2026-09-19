@@ -2,7 +2,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import emailjs from '@emailjs/browser';
 import { Loader2Icon, Mail, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
@@ -10,6 +9,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { toast } from 'sonner';
 import SectionHeading from './SectionHeading';
 import SectionTitle from './SectionTitle';
+
 export default function ContactSection() {
    const [formData, setFormData] = useState({
       name: '',
@@ -19,34 +19,44 @@ export default function ContactSection() {
    const [loading, setLoading] = useState(false);
    const isActive = formData?.name && formData?.email && formData?.message;
 
-   const sendEmail = (e: React.FormEvent) => {
+   const sendEmail = async (e: React.FormEvent) => {
       e.preventDefault();
       setLoading(true);
 
-      emailjs
-         .send(
-            'service_23fvflg',
-            'template_g8pmvk4',
-            {
-               title: formData.name,
-               name: formData.name,
-               email: formData.email,
-               message: formData.message,
+      const submissionData = {
+         access_key: '5420df98-b686-4c04-b09e-03aafcd6e3d9',
+         name: formData.name,
+         email: formData.email,
+         message: formData.message,
+         subject: `New Portfolio Message from ${formData.name}`,
+         from_name: formData.name,
+         reply_to: formData.email,
+      };
+
+      try {
+         const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+               Accept: 'application/json',
             },
-            'nhz2Wr41c11WzC-YP'
-         )
-         .then(
-            () => {
-               toast.success('Message sent successfully!');
-               setFormData({ name: '', email: '', message: '' });
-               setLoading(false);
-            },
-            (error) => {
-               toast.error('Failed to send message. Try again later.');
-               console.error(error);
-               setLoading(false);
-            }
-         );
+            body: JSON.stringify(submissionData),
+         });
+
+         const result = await response.json();
+
+         if (result.success) {
+            toast.success('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' });
+         } else {
+            toast.error('Failed to send message. Try again later.');
+         }
+      } catch (error) {
+         toast.error('Failed to send message. Try again later.');
+         console.error(error);
+      } finally {
+         setLoading(false);
+      }
    };
 
    return (
@@ -80,7 +90,9 @@ export default function ContactSection() {
                      viewport={{ once: true }}
                   >
                      <Mail className="text-primary" />
-                     <span className="md:text-lg">contact.forhadreza@gmail.com</span>
+                     <span className="md:text-lg">
+                        contact.forhadreza@gmail.com
+                     </span>
                   </motion.div>
                   <motion.div
                      className="flex items-center gap-3"
