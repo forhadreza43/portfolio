@@ -79,7 +79,7 @@ export default function ContactSection() {
                      viewport={{ once: true }}
                   >
                      <Mail className="text-primary" />
-                     <span className="md:text-lg">forhad.bimt@gmail.com</span>
+                     <span className="md:text-lg">contact.forhadreza@gmail.com</span>
                   </motion.div>
                   <motion.div
                      className="flex items-center gap-3"
